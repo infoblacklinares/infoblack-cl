@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InfoBl@ck — Servicios Informáticos en Linares</title>
+
+<!-- SEO -->
+<meta name="description" content="Reparación de PC y celulares, trámites digitales y páginas web para negocios en Linares, VII Región. A domicilio, precio justo y sin tecnicismos. Llama o escribe por WhatsApp.">
+<meta name="keywords" content="reparación computadores Linares, técnico informático Linares, páginas web Linares, trámites digitales Linares, celulares Linares, VII Región Maule">
+<meta name="author" content="Willson Pérez — InfoBl@ck">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph (WhatsApp, Facebook, etc.) -->
+<meta property="og:title" content="InfoBl@ck — Servicios Informáticos en Linares">
+<meta property="og:description" content="Reparo tu PC o celular, te ayudo con trámites digitales y creo páginas web para tu negocio. A domicilio en Linares, VII Región.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://infoblack.cl">
+<meta property="og:locale" content="es_CL">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="InfoBl@ck — Servicios Informáticos en Linares">
+<meta name="twitter:description" content="Reparación PC/celular, trámites digitales y páginas web en Linares. A domicilio, precio justo.">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0a0a'/><text y='.9em' font-size='72' x='10' fill='%23e8ff00'>I</text></svg>">
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --negro: #0a0a0a;
+  --blanco: #f5f4f0;
+  --acento: #e8ff00;
+  --gris: #1a1a1a;
+  --gris2: #2a2a2a;
+  --muted: #888;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--negro); color: var(--blanco); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.2rem 2rem;
+  background: rgba(10,10,10,0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid #222;
+}
+.logo { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--blanco); text-decoration: none; }
+.logo span { color: var(--acento); }
+nav ul { display: flex; gap: 2rem; list-style: none; }
+nav ul a { font-size: 0.85rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+nav ul a:hover { color: var(--blanco); }
+.nav-cta { background: var(--acento) !important; color: var(--negro) !important; padding: 0.5rem 1.2rem; border-radius: 100px; font-weight: 500 !important; }
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--blanco);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px; left: 0; right: 0;
+  background: rgba(10,10,10,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid #222;
+  padding: 1.5rem 2rem;
+  z-index: 99;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { color: var(--muted); text-decoration: none; font-size: 1rem; transition: color 0.2s; }
+.mobile-menu a:hover { color: var(--blanco); }
+.mobile-menu .nav-cta { background: var(--acento); color: var(--negro); padding: 0.6rem 1.4rem; border-radius: 100px; font-weight: 500; text-align: center; }
+
+/* HERO */
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 2rem 4rem; max-width: 1100px; margin: 0 auto; }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gris2); border: 0.5px solid #333; border-radius: 100px;
+  padding: 0.4rem 1rem; font-size: 0.8rem; color: var(--muted);
+  margin-bottom: 2rem; width: fit-content;
+  animation: fadeUp 0.6s ease both;
+}
+.hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--acento); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 8vw, 6rem); font-weight: 800; line-height: 1.0; letter-spacing: -2px; margin-bottom: 1.5rem; animation: fadeUp 0.6s 0.1s ease both; }
+.hero h1 em { font-style: normal; color: var(--acento); }
+.hero h1 .sub { display: block; color: var(--muted); font-weight: 400; font-size: 0.55em; letter-spacing: -1px; margin-top: 0.3rem; }
+.hero-desc { font-size: 1.1rem; color: var(--muted); max-width: 520px; margin-bottom: 2.5rem; font-weight: 300; animation: fadeUp 0.6s 0.2s ease both; }
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.6s 0.3s ease both; }
+.btn-primary { background: var(--acento); color: var(--negro); padding: 0.85rem 2rem; border-radius: 100px; font-weight: 500; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.15s, opacity 0.15s; }
+.btn-primary:hover { transform: translateY(-2px); opacity: 0.9; }
+.btn-secondary { background: transparent; color: var(--blanco); padding: 0.85rem 2rem; border-radius: 100px; border: 0.5px solid #333; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: border-color 0.2s, transform 0.15s; }
+.btn-secondary:hover { border-color: #555; transform: translateY(-2px); }
+.hero-stats { display: flex; gap: 3rem; margin-top: 5rem; border-top: 0.5px solid #222; padding-top: 2rem; animation: fadeUp 0.6s 0.4s ease both; flex-wrap: wrap; }
+.stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 700; }
+.stat-num span { color: var(--acento); }
+.stat-label { font-size: 0.8rem; color: var(--muted); }
+
+/* SECCIONES */
+.section { max-width: 1100px; margin: 0 auto; padding: 6rem 2rem; }
+.section-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 3px; color: var(--acento); text-transform: uppercase; margin-bottom: 1rem; }
+.section-title { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -1px; line-height: 1.1; margin-bottom: 3rem; }
+.section-title .muted { color: var(--muted); font-weight: 400; }
+
+/* SERVICIOS */
+.servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: #1a1a1a; border: 1px solid #1a1a1a; border-radius: 16px; overflow: hidden; }
+.servicio-card { background: var(--negro); padding: 2.5rem; transition: background 0.2s; position: relative; overflow: hidden; }
+.servicio-card:hover { background: #111; }
+.servicio-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--acento); transform: scaleX(0); transition: transform 0.3s; }
+.servicio-card:hover::after { transform: scaleX(1); }
+.servicio-num { font-family: 'Syne', sans-serif; font-size: 0.75rem; color: var(--acento); font-weight: 600; letter-spacing: 2px; margin-bottom: 1.5rem; }
+.servicio-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+.servicio-card h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; }
+.servicio-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
+.servicio-precio { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--acento); margin-top: 1.5rem; }
+.servicio-items { list-style: none; margin-top: 1rem; }
+.servicio-items li { font-size: 0.85rem; color: #666; padding: 0.3rem 0; border-bottom: 0.5px solid #1a1a1a; display: flex; gap: 8px; align-items: center; }
+.servicio-items li::before { content: '→'; color: var(--acento); font-size: 0.75rem; flex-shrink: 0; }
+
+/* NOSOTROS */
+.porque-section { background: var(--gris); padding: 6rem 2rem; }
+.porque-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.porque-avatar { width: 180px; height: 180px; border-radius: 50%; background: var(--gris2); border: 2px solid #333; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-size: 4rem; font-weight: 800; color: var(--acento); margin-bottom: 2rem; position: relative; }
+.porque-avatar::after { content: '✓ Ing. Informático'; position: absolute; bottom: -10px; right: -20px; background: var(--acento); color: var(--negro); font-family: 'DM Sans', sans-serif; font-size: 0.7rem; font-weight: 500; padding: 4px 10px; border-radius: 100px; white-space: nowrap; }
+.porque-texto h2 { font-family: 'Syne', sans-serif; font-size: 2.2rem; font-weight: 700; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 1rem; }
+.porque-texto p { font-size: 1rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.2rem; }
+.pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 1.5rem; }
+.pill { background: var(--gris2); border: 0.5px solid #333; color: var(--blanco); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; }
+
+/* PROCESO */
+.proceso-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.proceso-step { padding-left: 1.5rem; border-left: 0.5px solid #333; }
+.proceso-step-num { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: #222; line-height: 1; margin-bottom: 0.5rem; }
+.proceso-step h4 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+.proceso-step p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+
+/* PRECIOS */
+.precios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+.precio-card { background: var(--gris); border: 0.5px solid #2a2a2a; border-radius: 16px; padding: 2rem; transition: border-color 0.2s; }
+.precio-card:hover { border-color: #444; }
+.precio-card.destacado { border-color: var(--acento); }
+.precio-badge { display: inline-block; background: var(--acento); color: var(--negro); font-size: 0.7rem; font-weight: 600; letter-spacing: 1px; padding: 3px 10px; border-radius: 100px; margin-bottom: 1rem; }
+.precio-card h4 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.precio-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--acento); margin: 0.5rem 0; }
+.precio-num small { font-size: 0.9rem; font-weight: 400; color: var(--muted); }
+.precio-items { list-style: none; margin-top: 1rem; }
+.precio-items li { font-size: 0.85rem; color: #888; padding: 0.4rem 0; border-bottom: 0.5px solid #2a2a2a; display: flex; gap: 8px; }
+.precio-items li::before { content: '✓'; color: var(--acento); flex-shrink: 0; }
+
+/* CTA */
+.cta-section { background: var(--acento); padding: 6rem 2rem; text-align: center; }
+.cta-section h2 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: var(--negro); letter-spacing: -1px; line-height: 1.1; margin-bottom: 1.5rem; }
+.cta-section p { font-size: 1.1rem; color: #444; margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+.btn-dark { background: var(--negro); color: var(--blanco); padding: 1rem 2.5rem; border-radius: 100px; font-weight: 500; font-size: 1rem; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: opacity 0.2s, transform 0.15s; }
+.btn-dark:hover { opacity: 0.85; transform: translateY(-2px); }
+
+/* CONTACTO */
+.contacto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.contacto-card { background: var(--gris); border: 0.5px solid #222; border-radius: 12px; padding: 1.5rem; transition: border-color 0.2s; text-decoration: none; display: block; }
+.contacto-card:hover { border-color: var(--acento); }
+.c-icon { font-size: 1.5rem; margin-bottom: 0.75rem; display: block; }
+.c-label { font-size: 0.75rem; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 0.5rem; }
+.c-value { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 600; color: var(--blanco); }
+
+/* FOOTER */
+footer { border-top: 0.5px solid #1a1a1a; padding: 2rem; text-align: center; font-size: 0.8rem; color: var(--muted); }
+footer strong { color: var(--acento); }
+
+/* ANIMACIONES */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul { display: none; }
+  .hamburger { display: flex; }
+  .porque-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-stats { gap: 2rem; }
+  .hero h1 { font-size: 2.8rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">Info<span>Bl@ck</span></a>
+  <ul>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#precios">Precios</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#proceso">Cómo trabajo</a></li>
+    <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+  </ul>
+  <button class="hamburger" id="hambBtn" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="#precios" onclick="closeMenu()">Precios</a>
+  <a href="#nosotros" onclick="closeMenu()">Nosotros</a>
+  <a href="#proceso" onclick="closeMenu()">Cómo trabajo</a>
+  <a href="#contacto" class="nav-cta" onclick="closeMenu()">Contactar</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">Disponible en Linares y alrededores · VII Región</div>
+  <h1>
+    Tu tecnología,<br>
+    <em>sin complicaciones.</em>
+    <span class="sub">Ingeniero Informático a tu servicio en la VII Región</span>
+  </h1>
+  <p class="hero-desc">
+    Reparo tu PC o celular, te ayudo con tus trámites digitales y creo páginas web para tu negocio. Todo a domicilio, sin tecnicismos y con precio justo.
+  </p>
+  <div class="hero-btns">
+    <a href="https://wa.me/56984272557" class="btn-primary">💬 Escríbeme por WhatsApp</a>
+    <a href="#servicios" class="btn-secondary">Ver servicios →</a>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <div class="stat-num">VII<span>.</span></div>
+      <div class="stat-label">Región del Maule</div>
+    </div>
+    <div>
+      <div class="stat-num">3<span>+</span></div>
+      <div class="stat-label">Servicios especializados</div>
+    </div>
+    <div>
+      <div class="stat-num">A<span> domicilio</span></div>
+      <div class="stat-label">Voy donde estés</div>
+    </div>
+    <div>
+      <div class="stat-num">1<span>hr</span></div>
+      <div class="stat-label">Respuesta por WhatsApp</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section" id="servicios">
+  <div class="section-label reveal">Lo que hago</div>
+  <h2 class="section-title reveal">3 problemas que <span class="muted">resuelvo hoy<br>mismo en Linares</span></h2>
+  <div class="servicios-grid">
+    <div class="servicio-card reveal">
+      <div class="servicio-num">01</div>
+      <span class="servicio-icon">🔧</span>
+      <h3>Reparación de PC y celulares</h3>
+      <p>¿Tu computador está lento, con virus o no prende? ¿El celular no carga o está lleno? Lo reviso y lo dejo funcionando. Voy a tu domicilio o negocio en Linares.</p>
+      <ul class="servicio-items">
+        <li>Eliminación de virus y optimización</li>
+        <li>Formateo e instalación de sistema</li>
+        <li>Respaldo de fotos y datos importantes</li>
+        <li>Reparación de celulares y laptops</li>
+      </ul>
+      <div class="servicio-precio">Desde $15.000</div>
+    </div>
+    <div class="servicio-card reveal">
+      <div class="servicio-num">02</div>
+      <span class="servicio-icon">🏛️</span>
+      <h3>Trámites digitales y Clave Única</h3>
+      <p>¿Le cuesta entrar al SII, sacar hora médica o usar la app del banco? Le ayudo paso a paso, con paciencia y sin apuro. Voy a su domicilio si lo necesita.</p>
+      <ul class="servicio-items">
+        <li>SII, Registro Civil, BancoEstado</li>
+        <li>Configuración de app bancaria segura</li>
+        <li>Clave Única y trámites en línea</li>
+        <li>Atención especial a adultos mayores</li>
+      </ul>
+      <div class="servicio-precio">Desde $10.000</div>
+    </div>
+    <div class="servicio-card reveal">
+      <div class="servicio-num">03</div>
+      <span class="servicio-icon">🌐</span>
+      <h3>Páginas web para negocios</h3>
+      <p>¿Tu local no aparece en Google? Te hago una página web profesional para que tus clientes te encuentren fácil. Sin contratos complicados ni lenguaje técnico.</p>
+      <ul class="servicio-items">
+        <li>Sitio web con tus servicios y contacto</li>
+        <li>Catálogo digital de productos</li>
+        <li>Google Maps + correo corporativo</li>
+        <li>Fácil de actualizar tú mismo</li>
+      </ul>
+      <div class="servicio-precio">Desde $120.000</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section class="section" id="precios" style="padding-top:0;">
+  <div class="section-label reveal">Tarifas claras</div>
+  <h2 class="section-title reveal">Sin sorpresas, <span class="muted">sabes cuánto<br>pagas antes de empezar</span></h2>
+  <div class="precios-grid">
+    <div class="precio-card reveal">
+      <h4>Reparación básica</h4>
+      <div class="precio-num">$15.000 <small>– $20.000</small></div>
+      <ul class="precio-items">
+        <li>Diagnóstico del equipo</li>
+        <li>Eliminación de virus</li>
+        <li>Optimización de velocidad</li>
+        <li>Atención en tu domicilio</li>
+      </ul>
+    </div>
+    <div class="precio-card reveal">
+      <h4>Formateo completo</h4>
+      <div class="precio-num">$10.000</div>
+      <ul class="precio-items">
+        <li>Instalación limpia del sistema</li>
+        <li>Word y programas básicos incluidos</li>
+        <li>Equipo funcionando al 100%</li>
+        <li>Rápido y sin complicaciones</li>
+      </ul>
+    </div>
+    <div class="precio-card reveal">
+      <h4>Trámites digitales</h4>
+      <div class="precio-num">$10.000 <small>– $15.000</small></div>
+      <ul class="precio-items">
+        <li>Hasta 2 trámites por visita</li>
+        <li>Te enseño a hacerlo solo</li>
+        <li>Atención en tu domicilio</li>
+        <li>Paciencia garantizada</li>
+      </ul>
+    </div>
+    <div class="precio-card destacado reveal">
+      <div class="precio-badge">MÁS SOLICITADO</div>
+      <h4>Página web para negocio</h4>
+      <div class="precio-num">$120.000 <small>– $250.000</small></div>
+      <ul class="precio-items">
+        <li>Diseño profesional personalizado</li>
+        <li>Registro en Google Maps</li>
+        <li>Correo corporativo incluido</li>
+        <li>Entrega en 5–7 días hábiles</li>
+        <li>Mantenimiento mensual opcional</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="porque-section" id="nosotros">
+  <div class="porque-inner">
+    <div>
+      <div class="porque-avatar">W</div>
+      <div class="pills">
+        <span class="pill">Linares, VII Región</span>
+        <span class="pill">A domicilio</span>
+        <span class="pill">Precio justo</span>
+        <span class="pill">Sin tecnicismos</span>
+      </div>
+    </div>
+    <div class="porque-texto reveal">
+      <p class="section-label">Por qué InfoBl@ck</p>
+      <h2>No soy una empresa grande.<br>Soy tu vecino técnico.</h2>
+      <p>Soy Willson Valdés, Ingeniero Informático de Linares. Reparo PCs y celulares, ayudo con trámites digitales y creo páginas web para negocios locales. Conozco lo que necesita la gente de la región porque vivo aquí.</p>
+      <p>No te voy a hablar en términos complicados ni te voy a cobrar de más. Si tienes un problema con tu tecnología, lo resuelvo ese mismo día. Si tienes un negocio, te ayudo a que más gente te encuentre en internet.</p>
+      <p>Mi compromiso es simple: precio claro antes de empezar, trabajo bien hecho, y te explico todo para que no dependas de mí siempre.</p>
+      <a href="https://wa.me/56984272557" class="btn-primary" style="margin-top:1rem;">Hablemos →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="section" id="proceso">
+  <div class="section-label reveal">Cómo trabajo</div>
+  <h2 class="section-title reveal">Simple, rápido <span class="muted">y sin sorpresas</span></h2>
+  <div class="proceso-grid">
+    <div class="proceso-step reveal">
+      <div class="proceso-step-num">01</div>
+      <h4>Me contactas</h4>
+      <p>Por WhatsApp, llamada o correo. Me cuentas qué necesitas y acordamos un horario que te acomode.</p>
+    </div>
+    <div class="proceso-step reveal">
+      <div class="proceso-step-num">02</div>
+      <h4>Te visito</h4>
+      <p>Voy a tu domicilio o negocio en Linares. Sin costo de visita adicional dentro de la ciudad.</p>
+    </div>
+    <div class="proceso-step reveal">
+      <div class="proceso-step-num">03</div>
+      <h4>Presupuesto claro</h4>
+      <p>Sin sorpresas ni cobros escondidos. Sabes exactamente cuánto vale antes de que yo empiece.</p>
+    </div>
+    <div class="proceso-step reveal">
+      <div class="proceso-step-num">04</div>
+      <h4>Trabajo y explico</h4>
+      <p>No solo lo hago — te explico qué hice y por qué, para que entiendas y no dependas de mí siempre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>¿Listo para resolver<br>tu problema hoy?</h2>
+  <p>Escríbeme por WhatsApp y te respondo en menos de 1 hora en horario laboral.</p>
+  <a href="https://wa.me/56984272557" class="btn-dark">💬 Escribir por WhatsApp →</a>
+</section>
+
+<!-- CONTACTO -->
+<section class="section" id="contacto">
+  <div class="section-label reveal">Contacto</div>
+  <h2 class="section-title reveal">Estoy en <span class="muted">Linares,<br>VII Región</span></h2>
+  <p style="color:var(--muted); max-width:500px; margin-bottom:0.5rem;" class="reveal">Atiendo a domicilio en Linares y comunas cercanas. Respondo por WhatsApp de lunes a sábado.</p>
+  <div class="contacto-grid">
+    <a href="https://wa.me/56984272557" class="contacto-card reveal">
+      <span class="c-icon">📱</span>
+      <div class="c-label">WhatsApp / Llamada</div>
+      <div class="c-value">+56 9 8427 2557</div>
+    </a>
+    <a href="mailto:infoblack.linares@gmail.com" class="contacto-card reveal">
+      <span class="c-icon">📧</span>
+      <div class="c-label">Correo</div>
+      <div class="c-value" style="font-size:0.82rem;word-break:break-all;">infoblack.linares@gmail.com</div>
+    </a>
+    <div class="contacto-card reveal">
+      <span class="c-icon">📍</span>
+      <div class="c-label">Zona de atención</div>
+      <div class="c-value">Linares y alrededores</div>
+    </div>
+    <div class="contacto-card reveal">
+      <span class="c-icon">🕐</span>
+      <div class="c-label">Horario</div>
+      <div class="c-value">Lun–Sáb, 9:00–20:00</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <strong>InfoBl@ck</strong> — Servicios Informáticos · Linares, VII Región · Todos los derechos reservados</p>
+</footer>
+
+<script>
+const hambBtn = document.getElementById('hambBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+hambBtn.addEventListener('click', () => {
+  hambBtn.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+function closeMenu() {
+  hambBtn.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
