@@ -4,28 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>InfoBl@ck — Servicios Informáticos en Linares</title>
-
-<!-- SEO -->
 <meta name="description" content="Reparación de PC y celulares, trámites digitales y páginas web para negocios en Linares, VII Región. A domicilio, precio justo y sin tecnicismos. Llama o escribe por WhatsApp.">
 <meta name="keywords" content="reparación computadores Linares, técnico informático Linares, páginas web Linares, trámites digitales Linares, celulares Linares, VII Región Maule">
 <meta name="author" content="Willson Pérez — InfoBl@ck">
 <meta name="robots" content="index, follow">
-
-<!-- Open Graph (WhatsApp, Facebook, etc.) -->
 <meta property="og:title" content="InfoBl@ck — Servicios Informáticos en Linares">
 <meta property="og:description" content="Reparo tu PC o celular, te ayudo con trámites digitales y creo páginas web para tu negocio. A domicilio en Linares, VII Región.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://infoblack.cl">
 <meta property="og:locale" content="es_CL">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="InfoBl@ck — Servicios Informáticos en Linares">
 <meta name="twitter:description" content="Reparación PC/celular, trámites digitales y páginas web en Linares. A domicilio, precio justo.">
-
-<!-- Favicon -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0a0a'/><text y='.9em' font-size='72' x='10' fill='%23e8ff00'>I</text></svg>">
-
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -39,74 +30,29 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { background: var(--negro); color: var(--blanco); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden; }
-
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 1.2rem 2rem;
-  background: rgba(10,10,10,0.9);
-  backdrop-filter: blur(12px);
-  border-bottom: 0.5px solid #222;
-}
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; background: rgba(10,10,10,0.9); backdrop-filter: blur(12px); border-bottom: 0.5px solid #222; }
 .logo { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--blanco); text-decoration: none; }
 .logo span { color: var(--acento); }
 nav ul { display: flex; gap: 2rem; list-style: none; }
 nav ul a { font-size: 0.85rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
 nav ul a:hover { color: var(--blanco); }
 .nav-cta { background: var(--acento) !important; color: var(--negro) !important; padding: 0.5rem 1.2rem; border-radius: 100px; font-weight: 500 !important; }
-
-/* HAMBURGER */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 4px;
-  background: none;
-  border: none;
-}
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--blanco);
-  border-radius: 2px;
-  transition: all 0.3s;
-}
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--blanco); border-radius: 2px; transition: all 0.3s; }
 .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 64px; left: 0; right: 0;
-  background: rgba(10,10,10,0.97);
-  backdrop-filter: blur(12px);
-  border-bottom: 0.5px solid #222;
-  padding: 1.5rem 2rem;
-  z-index: 99;
-  flex-direction: column;
-  gap: 1.2rem;
-}
+.mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: rgba(10,10,10,0.97); backdrop-filter: blur(12px); border-bottom: 0.5px solid #222; padding: 1.5rem 2rem; z-index: 99; flex-direction: column; gap: 1.2rem; }
 .mobile-menu.open { display: flex; }
 .mobile-menu a { color: var(--muted); text-decoration: none; font-size: 1rem; transition: color 0.2s; }
 .mobile-menu a:hover { color: var(--blanco); }
 .mobile-menu .nav-cta { background: var(--acento); color: var(--negro); padding: 0.6rem 1.4rem; border-radius: 100px; font-weight: 500; text-align: center; }
-
-/* HERO */
 .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 2rem 4rem; max-width: 1100px; margin: 0 auto; }
-.hero-tag {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--gris2); border: 0.5px solid #333; border-radius: 100px;
-  padding: 0.4rem 1rem; font-size: 0.8rem; color: var(--muted);
-  margin-bottom: 2rem; width: fit-content;
-  animation: fadeUp 0.6s ease both;
-}
+.hero-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--gris2); border: 0.5px solid #333; border-radius: 100px; padding: 0.4rem 1rem; font-size: 0.8rem; color: var(--muted); margin-bottom: 2rem; width: fit-content; animation: fadeUp 0.6s ease both; }
 .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--acento); animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-.hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 8vw, 6rem); font-weight: 800; line-height: 1.0; letter-spacing: -2px; margin-bottom: 1.5rem; animation: fadeUp 0.6s 0.1s ease both; }
+/* TÍTULO AJUSTADO */
+.hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 6vw, 6rem); font-weight: 800; line-height: 1.0; letter-spacing: -2px; margin-bottom: 1.5rem; animation: fadeUp 0.6s 0.1s ease both; }
 .hero h1 em { font-style: normal; color: var(--acento); }
 .hero h1 .sub { display: block; color: var(--muted); font-weight: 400; font-size: 0.55em; letter-spacing: -1px; margin-top: 0.3rem; }
 .hero-desc { font-size: 1.1rem; color: var(--muted); max-width: 520px; margin-bottom: 2.5rem; font-weight: 300; animation: fadeUp 0.6s 0.2s ease both; }
@@ -119,14 +65,10 @@ nav ul a:hover { color: var(--blanco); }
 .stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 700; }
 .stat-num span { color: var(--acento); }
 .stat-label { font-size: 0.8rem; color: var(--muted); }
-
-/* SECCIONES */
 .section { max-width: 1100px; margin: 0 auto; padding: 6rem 2rem; }
 .section-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 3px; color: var(--acento); text-transform: uppercase; margin-bottom: 1rem; }
 .section-title { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; letter-spacing: -1px; line-height: 1.1; margin-bottom: 3rem; }
 .section-title .muted { color: var(--muted); font-weight: 400; }
-
-/* SERVICIOS */
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: #1a1a1a; border: 1px solid #1a1a1a; border-radius: 16px; overflow: hidden; }
 .servicio-card { background: var(--negro); padding: 2.5rem; transition: background 0.2s; position: relative; overflow: hidden; }
 .servicio-card:hover { background: #111; }
@@ -140,8 +82,6 @@ nav ul a:hover { color: var(--blanco); }
 .servicio-items { list-style: none; margin-top: 1rem; }
 .servicio-items li { font-size: 0.85rem; color: #666; padding: 0.3rem 0; border-bottom: 0.5px solid #1a1a1a; display: flex; gap: 8px; align-items: center; }
 .servicio-items li::before { content: '→'; color: var(--acento); font-size: 0.75rem; flex-shrink: 0; }
-
-/* NOSOTROS */
 .porque-section { background: var(--gris); padding: 6rem 2rem; }
 .porque-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 .porque-avatar { width: 180px; height: 180px; border-radius: 50%; background: var(--gris2); border: 2px solid #333; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-size: 4rem; font-weight: 800; color: var(--acento); margin-bottom: 2rem; position: relative; }
@@ -150,15 +90,11 @@ nav ul a:hover { color: var(--blanco); }
 .porque-texto p { font-size: 1rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.2rem; }
 .pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 1.5rem; }
 .pill { background: var(--gris2); border: 0.5px solid #333; color: var(--blanco); padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.8rem; }
-
-/* PROCESO */
 .proceso-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3rem; }
 .proceso-step { padding-left: 1.5rem; border-left: 0.5px solid #333; }
 .proceso-step-num { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: #222; line-height: 1; margin-bottom: 0.5rem; }
 .proceso-step h4 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
 .proceso-step p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
-
-/* PRECIOS */
 .precios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
 .precio-card { background: var(--gris); border: 0.5px solid #2a2a2a; border-radius: 16px; padding: 2rem; transition: border-color 0.2s; }
 .precio-card:hover { border-color: #444; }
@@ -170,44 +106,33 @@ nav ul a:hover { color: var(--blanco); }
 .precio-items { list-style: none; margin-top: 1rem; }
 .precio-items li { font-size: 0.85rem; color: #888; padding: 0.4rem 0; border-bottom: 0.5px solid #2a2a2a; display: flex; gap: 8px; }
 .precio-items li::before { content: '✓'; color: var(--acento); flex-shrink: 0; }
-
-/* CTA */
 .cta-section { background: var(--acento); padding: 6rem 2rem; text-align: center; }
 .cta-section h2 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: var(--negro); letter-spacing: -1px; line-height: 1.1; margin-bottom: 1.5rem; }
 .cta-section p { font-size: 1.1rem; color: #444; margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
 .btn-dark { background: var(--negro); color: var(--blanco); padding: 1rem 2.5rem; border-radius: 100px; font-weight: 500; font-size: 1rem; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: opacity 0.2s, transform 0.15s; }
 .btn-dark:hover { opacity: 0.85; transform: translateY(-2px); }
-
-/* CONTACTO */
 .contacto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
 .contacto-card { background: var(--gris); border: 0.5px solid #222; border-radius: 12px; padding: 1.5rem; transition: border-color 0.2s; text-decoration: none; display: block; }
 .contacto-card:hover { border-color: var(--acento); }
 .c-icon { font-size: 1.5rem; margin-bottom: 0.75rem; display: block; }
 .c-label { font-size: 0.75rem; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 0.5rem; }
 .c-value { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 600; color: var(--blanco); }
-
-/* FOOTER */
 footer { border-top: 0.5px solid #1a1a1a; padding: 2rem; text-align: center; font-size: 0.8rem; color: var(--muted); }
 footer strong { color: var(--acento); }
-
-/* ANIMACIONES */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
   nav ul { display: none; }
   .hamburger { display: flex; }
   .porque-inner { grid-template-columns: 1fr; gap: 2rem; }
   .hero-stats { gap: 2rem; }
-  .hero h1 { font-size: 2.8rem; }
+  .hero h1 { font-size: 2rem; letter-spacing: -1px; }
 }
 </style>
 </head>
 <body>
-
-<!-- NAV -->
+ 
 <nav>
   <a href="#" class="logo">Info<span>Bl@ck</span></a>
   <ul>
@@ -221,8 +146,7 @@ footer strong { color: var(--acento); }
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-<!-- MENÚ MÓVIL -->
+ 
 <div class="mobile-menu" id="mobileMenu">
   <a href="#servicios" onclick="closeMenu()">Servicios</a>
   <a href="#precios" onclick="closeMenu()">Precios</a>
@@ -230,8 +154,7 @@ footer strong { color: var(--acento); }
   <a href="#proceso" onclick="closeMenu()">Cómo trabajo</a>
   <a href="#contacto" class="nav-cta" onclick="closeMenu()">Contactar</a>
 </div>
-
-<!-- HERO -->
+ 
 <section class="hero">
   <div class="hero-tag">Disponible en Linares y alrededores · VII Región</div>
   <h1>
@@ -243,7 +166,7 @@ footer strong { color: var(--acento); }
     Reparo tu PC o celular, te ayudo con tus trámites digitales y creo páginas web para tu negocio. Todo a domicilio, sin tecnicismos y con precio justo.
   </p>
   <div class="hero-btns">
-    <a href="https://wa.me/56984272557" class="btn-primary">💬 Escríbeme por WhatsApp</a>
+    <a href="https://wa.me/56984272557?text=Hola%20Willson%2C%20vi%20tu%20p%C3%A1gina%20web%20y%20necesito%20ayuda%20con%20mi%20equipo.%20%C2%BFEst%C3%A1s%20disponible%3F" class="btn-primary">💬 Escríbeme por WhatsApp</a>
     <a href="#servicios" class="btn-secondary">Ver servicios →</a>
   </div>
   <div class="hero-stats">
@@ -265,8 +188,7 @@ footer strong { color: var(--acento); }
     </div>
   </div>
 </section>
-
-<!-- SERVICIOS -->
+ 
 <section class="section" id="servicios">
   <div class="section-label reveal">Lo que hago</div>
   <h2 class="section-title reveal">3 problemas que <span class="muted">resuelvo hoy<br>mismo en Linares</span></h2>
@@ -312,8 +234,7 @@ footer strong { color: var(--acento); }
     </div>
   </div>
 </section>
-
-<!-- PRECIOS -->
+ 
 <section class="section" id="precios" style="padding-top:0;">
   <div class="section-label reveal">Tarifas claras</div>
   <h2 class="section-title reveal">Sin sorpresas, <span class="muted">sabes cuánto<br>pagas antes de empezar</span></h2>
@@ -362,8 +283,7 @@ footer strong { color: var(--acento); }
     </div>
   </div>
 </section>
-
-<!-- NOSOTROS -->
+ 
 <section class="porque-section" id="nosotros">
   <div class="porque-inner">
     <div>
@@ -381,12 +301,11 @@ footer strong { color: var(--acento); }
       <p>Soy Willson Valdés, Ingeniero Informático de Linares. Reparo PCs y celulares, ayudo con trámites digitales y creo páginas web para negocios locales. Conozco lo que necesita la gente de la región porque vivo aquí.</p>
       <p>No te voy a hablar en términos complicados ni te voy a cobrar de más. Si tienes un problema con tu tecnología, lo resuelvo ese mismo día. Si tienes un negocio, te ayudo a que más gente te encuentre en internet.</p>
       <p>Mi compromiso es simple: precio claro antes de empezar, trabajo bien hecho, y te explico todo para que no dependas de mí siempre.</p>
-      <a href="https://wa.me/56984272557" class="btn-primary" style="margin-top:1rem;">Hablemos →</a>
+      <a href="https://wa.me/56984272557?text=Hola%20Willson%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20trabajar%20contigo.%20%C2%BFPodemos%20hablar%3F" class="btn-primary" style="margin-top:1rem;">Hablemos →</a>
     </div>
   </div>
 </section>
-
-<!-- PROCESO -->
+ 
 <section class="section" id="proceso">
   <div class="section-label reveal">Cómo trabajo</div>
   <h2 class="section-title reveal">Simple, rápido <span class="muted">y sin sorpresas</span></h2>
@@ -413,21 +332,19 @@ footer strong { color: var(--acento); }
     </div>
   </div>
 </section>
-
-<!-- CTA -->
+ 
 <section class="cta-section">
   <h2>¿Listo para resolver<br>tu problema hoy?</h2>
   <p>Escríbeme por WhatsApp y te respondo en menos de 1 hora en horario laboral.</p>
-  <a href="https://wa.me/56984272557" class="btn-dark">💬 Escribir por WhatsApp →</a>
+  <a href="https://wa.me/56984272557?text=Hola%20Willson%2C%20necesito%20ayuda%20con%20mi%20equipo.%20%C2%BFEst%C3%A1s%20disponible%3F" class="btn-dark">💬 Escribir por WhatsApp →</a>
 </section>
-
-<!-- CONTACTO -->
+ 
 <section class="section" id="contacto">
   <div class="section-label reveal">Contacto</div>
   <h2 class="section-title reveal">Estoy en <span class="muted">Linares,<br>VII Región</span></h2>
   <p style="color:var(--muted); max-width:500px; margin-bottom:0.5rem;" class="reveal">Atiendo a domicilio en Linares y comunas cercanas. Respondo por WhatsApp de lunes a sábado.</p>
   <div class="contacto-grid">
-    <a href="https://wa.me/56984272557" class="contacto-card reveal">
+    <a href="https://wa.me/56984272557?text=Hola%20Willson%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20contactarme%20contigo." class="contacto-card reveal">
       <span class="c-icon">📱</span>
       <div class="c-label">WhatsApp / Llamada</div>
       <div class="c-value">+56 9 8427 2557</div>
@@ -449,12 +366,11 @@ footer strong { color: var(--acento); }
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
+ 
 <footer>
   <p>© 2026 <strong>InfoBl@ck</strong> — Servicios Informáticos · Linares, VII Región · Todos los derechos reservados</p>
 </footer>
-
+ 
 <script>
 const hambBtn = document.getElementById('hambBtn');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -466,7 +382,6 @@ function closeMenu() {
   hambBtn.classList.remove('open');
   mobileMenu.classList.remove('open');
 }
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
