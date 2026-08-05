@@ -168,6 +168,10 @@ footer strong{color:var(--acento);}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
+.promo-banner{width:100%;display:flex;justify-content:center;padding:0;margin:0;margin-top:64px;}
+.promo-banner-link{display:block;width:100%;max-width:100%;overflow:hidden;text-decoration:none;}
+.promo-banner-link img{display:block;width:100%;height:auto;object-fit:cover;transition:transform 0.3s ease;}
+.promo-banner-link:hover img{transform:scale(1.02);}
 @media(max-width:768px){
   nav ul{display:none;}
   .hamburger{display:flex;}
@@ -202,6 +206,12 @@ footer strong{color:var(--acento);}
   <a href="/pack-cumplimiento" onclick="closeMenu()">Pack Legal</a>
   <a href="#contacto" class="nav-cta" onclick="closeMenu()">Hablemos →</a>
 </div>
+
+<section class="promo-banner">
+  <a href="/pack-cumplimiento" class="promo-banner-link">
+    <img src="/assets/img/banner-pack-cumplimiento.jpg" alt="Pack Cumplimiento Ley 21.719 - InfoBl@ck" loading="lazy" />
+  </a>
+</section>
 
 <section class="hero">
   <div class="hero-tag">Agencia digital · Linares, VII Región</div>
