@@ -574,6 +574,30 @@ function closeMenu(){hambBtn.classList.remove('open');mobileMenu.classList.remov
 const observer=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*80);}});},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
+// Rate Limiting para contacto (evitar spam)
+function checkContactRateLimit(){
+  const contacts=JSON.parse(localStorage.getItem('contact-attempts')||'[]');
+  const now=Date.now();
+  const recentAttempts=contacts.filter(t=>now-t<60000); // Últimos 60 seg
+  if(recentAttempts.length>=5){
+    alert('Espera un minuto antes de enviar otro mensaje. Límite: 5 mensajes por minuto.');
+    return false;
+  }
+  recentAttempts.push(now);
+  localStorage.setItem('contact-attempts',JSON.stringify(recentAttempts));
+  return true;
+}
+
+// Aplicar rate limiting a botones WhatsApp
+document.addEventListener('DOMContentLoaded',()=>{
+  const waLinks=document.querySelectorAll('a[href*="wa.me"]');
+  waLinks.forEach(link=>{
+    link.addEventListener('click',(e)=>{
+      if(!checkContactRateLimit()){e.preventDefault();}
+    });
+  });
+});
+
 // Cookie Consent Management
 function showCookieBanner(){
   const banner=document.getElementById('cookie-banner');
