@@ -566,6 +566,17 @@ footer strong{color:var(--acento);}
   </div>
 </div>
 
+<!-- Sentry Error Tracking -->
+<script src="https://browser.sentry-cdn.com/7.98.0/bundle.min.js"></script>
+<script>
+Sentry.init({
+  dsn: 'https://YOUR_KEY@YOUR_ORG.ingest.sentry.io/YOUR_PROJECT_ID',
+  environment: 'production',
+  tracesSampleRate: 0.1,
+  attachStacktrace: true
+});
+</script>
+
 <script>
 const hambBtn=document.getElementById('hambBtn');
 const mobileMenu=document.getElementById('mobileMenu');
