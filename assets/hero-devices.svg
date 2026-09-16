@@ -1,0 +1,37 @@
+<svg width="900" height="650" viewBox="0 0 900 650" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="screen" x1="180" y1="70" x2="690" y2="500" gradientUnits="userSpaceOnUse"><stop stop-color="#1A1D1D"/><stop offset="1" stop-color="#070808"/></linearGradient>
+  <linearGradient id="yellow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F7FF36"/><stop offset="1" stop-color="#D8EC00"/></linearGradient>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="28" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#000" flood-opacity=".65"/></filter>
+</defs>
+<ellipse cx="525" cy="295" rx="265" ry="210" fill="#DFFF00" opacity=".08" filter="url(#glow)"/>
+<g filter="url(#shadow)" transform="translate(125 55) rotate(-7 300 220)">
+  <rect x="28" y="12" width="570" height="360" rx="23" fill="#0A0B0B" stroke="#747978" stroke-width="3"/>
+  <rect x="44" y="29" width="538" height="326" rx="13" fill="url(#screen)"/>
+  <rect x="44" y="29" width="538" height="42" rx="13" fill="#111515"/>
+  <circle cx="70" cy="50" r="4" fill="#DFFF00"/><circle cx="84" cy="50" r="4" fill="#4D5351"/><circle cx="98" cy="50" r="4" fill="#4D5351"/>
+  <text x="69" y="104" fill="#A9AEAB" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">ROCHA MUEBLERIA</text>
+  <text x="69" y="156" fill="#F7F8F5" font-family="Arial,sans-serif" font-weight="700" font-size="36">Muebles que</text>
+  <text x="69" y="198" fill="#F7F8F5" font-family="Arial,sans-serif" font-weight="700" font-size="36">hacen hogar.</text>
+  <rect x="69" y="226" width="100" height="28" rx="6" fill="#E9FF00"/><text x="84" y="245" fill="#080909" font-family="Arial,sans-serif" font-weight="700" font-size="10">VER PRODUCTOS</text>
+  <rect x="305" y="101" width="225" height="205" rx="10" fill="#292D2B"/>
+  <rect x="320" y="116" width="195" height="175" rx="8" fill="#3B3027"/>
+  <rect x="338" y="236" width="160" height="10" rx="5" fill="#6A5A49" opacity=".7"/>
+  <rect x="360" y="252" width="116" height="8" rx="4" fill="#6A5A49" opacity=".5"/>
+  <path d="M0 385H625L695 430H-65L0 385Z" fill="#171A19" stroke="#555B58" stroke-width="2"/>
+  <path d="M210 398H410L445 420H175L210 398Z" fill="#090A0A"/>
+</g>
+<g filter="url(#shadow)" transform="translate(610 105) rotate(7)">
+  <rect x="0" y="0" width="184" height="390" rx="32" fill="#090A0A" stroke="#6D7370" stroke-width="3"/>
+  <rect x="11" y="18" width="162" height="352" rx="23" fill="#101414"/>
+  <rect x="70" y="10" width="44" height="9" rx="5" fill="#090A0A"/>
+  <text x="31" y="67" fill="#F7F8F5" font-family="Arial,sans-serif" font-weight="700" font-size="22">Linares<tspan fill="#E9FF00">Ya</tspan></text>
+  <text x="31" y="96" fill="#AEB4B0" font-family="Arial,sans-serif" font-size="10">Todo Linares en un solo lugar</text>
+  <rect x="27" y="116" width="130" height="35" rx="9" fill="#F2F3EF"/><text x="39" y="138" fill="#626865" font-family="Arial,sans-serif" font-size="8">¿Qué estás buscando?</text><circle cx="145" cy="133" r="12" fill="#E9FF00"/>
+  <circle cx="47" cy="186" r="18" fill="#1C2220" stroke="#424845"/><circle cx="91" cy="186" r="18" fill="#1C2220" stroke="#424845"/><circle cx="135" cy="186" r="18" fill="#1C2220" stroke="#424845"/>
+  <text x="35" y="221" fill="#C8CDCA" font-family="Arial,sans-serif" font-size="8">Negocios</text><text x="79" y="221" fill="#C8CDCA" font-family="Arial,sans-serif" font-size="8">Servicios</text><text x="124" y="221" fill="#C8CDCA" font-family="Arial,sans-serif" font-size="8">Ofertas</text>
+  <rect x="27" y="244" width="130" height="88" rx="12" fill="#E9FF00" opacity=".95"/><text x="39" y="270" fill="#080909" font-family="Arial,sans-serif" font-weight="700" font-size="10">Descubre negocios</text><text x="39" y="286" fill="#080909" font-family="Arial,sans-serif" font-size="10">de Linares.</text>
+</g>
+<g transform="translate(760 490) rotate(-8)"><text x="0" y="0" fill="#F7F8F5" font-family="cursive" font-size="28" font-style="italic">Ideas que</text><text x="22" y="34" fill="#F7F8F5" font-family="cursive" font-size="28" font-style="italic">generan</text><text x="2" y="68" fill="#F7F8F5" font-family="cursive" font-size="28" font-style="italic">resultados</text><path d="M5 82C75 91 145 84 180 70" stroke="#E9FF00" stroke-width="7" stroke-linecap="round"/></g>
+</svg>
