@@ -16,27 +16,28 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/modern-typography.css?v=5">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"InfoBl@ck","description":"Agencia digital para negocios de Linares y la Región del Maule.","url":"https://infoblack.cl","telephone":"+56984272557","email":"infoblack.linares@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Linares","addressRegion":"Región del Maule","addressCountry":"CL"},"founder":{"@type":"Person","name":"Willson Valdés"},"priceRange":"$$"}</script>
+<style>
+.privacy-notice{position:fixed;z-index:3000;left:18px;right:18px;bottom:18px;max-width:920px;margin:0 auto;background:rgba(13,16,16,.97);border:1px solid #343b37;border-radius:14px;box-shadow:0 18px 55px rgba(0,0,0,.45);padding:16px 18px;display:flex;align-items:center;gap:18px;color:#d9ddda;font-size:11px;line-height:1.5;backdrop-filter:blur(18px)}
+.privacy-notice strong{color:#fff}.privacy-notice a{color:#ecff00;text-decoration:underline;text-underline-offset:3px}.privacy-notice button{margin-left:auto;flex:0 0 auto;border:1px solid #555d59;background:transparent;color:#fff;border-radius:9px;padding:8px 13px;font-size:11px;font-weight:700;cursor:pointer}.privacy-notice button:hover{border-color:#ecff00;color:#ecff00}@media(max-width:600px){.privacy-notice{left:10px;right:10px;bottom:10px;padding:14px;align-items:flex-start}.privacy-notice button{padding:7px 10px}}
+</style>
 </head>
 <body>
 <header class="site-header">
   <nav class="nav wrap">
     <a class="logo" href="#inicio" aria-label="InfoBl@ck inicio">InfoBl<span>@</span>ck<small>TECNOLOGÍA QUE IMPULSA NEGOCIOS</small></a>
     <div class="nav-links">
-      <a class="active" href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#trabajos">Trabajos</a>
-      <a href="#precios">Planes</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contacto">Contacto</a>
+      <a class="active" href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#trabajos">Trabajos</a><a href="#precios">Planes</a><a href="#faq">FAQ</a><a href="#contacto">Contacto</a>
     </div>
     <a class="nav-whatsapp" href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20mejorar%20mi%20negocio">◔ &nbsp;Hablemos</a>
     <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false">☰</button>
   </nav>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#trabajos">Trabajos</a><a href="#precios">Planes</a><a href="#faq">FAQ</a><a href="#contacto">Contacto</a>
-    <a class="nav-whatsapp" href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20mejorar%20mi%20negocio">Hablemos</a>
-  </div>
+  <div class="mobile-nav" id="mobileNav"><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#trabajos">Trabajos</a><a href="#precios">Planes</a><a href="#faq">FAQ</a><a href="#contacto">Contacto</a><a class="nav-whatsapp" href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20mejorar%20mi%20negocio">Hablemos</a></div>
 </header>
+
+<aside class="privacy-notice" id="privacyNotice" aria-label="Aviso de privacidad">
+  <div><strong>Tu privacidad importa.</strong> Este sitio no utiliza cookies de analítica ni publicidad. Para funcionar puede tratar datos técnicos básicos y cargar tipografías desde Google Fonts. Al abrir WhatsApp o Instagram, el tratamiento pasa a regirse por las políticas de esos servicios. <a href="/politica-de-privacidad/">Ver Política de Privacidad</a>.</div>
+  <button type="button" id="privacyDismiss">Ocultar</button>
+</aside>
 
 <main id="inicio">
 <section class="hero-reference">
@@ -45,57 +46,18 @@
       <div class="hero-kicker"><span></span> DESARROLLO WEB EN LINARES</div>
       <h1>Tu negocio<br><em>en internet,</em> en serio.</h1>
       <p>Diseñamos y desarrollamos sitios web modernos, rápidos y enfocados en resultados. Ayudamos a negocios de Linares y el Maule a crecer con tecnología.</p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20mi%20web">◔ &nbsp;Quiero mi web ahora →</a>
-        <a class="button button-outline" href="#trabajos">Ver nuestros trabajos</a>
-      </div>
-      <div class="hero-points">
-        <div><b>ϟ</b><span>Sitios rápidos<br>y seguros</span></div>
-        <div><b>▥</b><span>Orientados<br>a resultados</span></div>
-        <div><b>●</b><span>Atención local<br>en Linares</span></div>
-      </div>
+      <div class="hero-actions"><a class="button button-primary" href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20mi%20web">◔ &nbsp;Quiero mi web ahora →</a><a class="button button-outline" href="#trabajos">Ver nuestros trabajos</a></div>
+      <div class="hero-points"><div><b>ϟ</b><span>Sitios rápidos<br>y seguros</span></div><div><b>▥</b><span>Orientados<br>a resultados</span></div><div><b>●</b><span>Atención local<br>en Linares</span></div></div>
     </div>
-    <div class="hero-visual">
-      <img src="/assets/hero-devices.svg" alt="Diseños web de Mueblería Rocha y LinaresYa en computador y teléfono">
-      <div class="hero-tags">SITIOS WEB &nbsp;|&nbsp; E-COMMERCE &nbsp;|&nbsp; SISTEMAS &nbsp;|&nbsp; ASESORÍA</div>
-    </div>
+    <div class="hero-visual"><img src="/assets/hero-devices.svg" alt="Diseños web de Mueblería Rocha y LinaresYa en computador y teléfono"><div class="hero-tags">SITIOS WEB &nbsp;|&nbsp; E-COMMERCE &nbsp;|&nbsp; SISTEMAS &nbsp;|&nbsp; ASESORÍA</div></div>
   </div>
 </section>
 
-<section class="project-strip">
-  <div class="wrap strip-inner">
-    <div class="strip-label"><b>★</b><span>Proyectos<br>destacados</span></div>
-    <div class="strip-name rocha">ROCHA<small>MUEBLERÍA</small></div>
-    <div class="strip-name linaresya">Linares<span>Ya</span></div>
-    <div class="strip-name maulino">EL RINCÓN<br>MAULINO</div>
-    <div class="strip-name kings">♛ KING'S CUT<br><small>BARBERÍA</small></div>
-    <div class="strip-quote">“Profesionales, rápidos y siempre<br>dispuestos a ayudar.”<small>— Cliente Linares</small></div>
-  </div>
-</section>
+<section class="project-strip"><div class="wrap strip-inner"><div class="strip-label"><b>★</b><span>Proyectos<br>destacados</span></div><div class="strip-name rocha">ROCHA<small>MUEBLERÍA</small></div><div class="strip-name linaresya">Linares<span>Ya</span></div><div class="strip-name maulino">EL RINCÓN<br>MAULINO</div><div class="strip-name kings">♛ KING'S CUT<br><small>BARBERÍA</small></div><div class="strip-quote">“Profesionales, rápidos y siempre<br>dispuestos a ayudar.”<small>— Cliente Linares</small></div></div></section>
 
-<section id="servicios" class="services-section">
-  <div class="wrap">
-    <div class="section-head"><div><div class="section-kicker"><span></span> ¿QUÉ PODEMOS HACER POR TU NEGOCIO?</div><h2>Soluciones digitales para <em>hacer crecer tu negocio</em></h2></div><a href="#contacto">Ver todos los servicios →</a></div>
-    <div class="service-grid">
-      <article class="service-card"><div class="service-icon">◎</div><div><h3>Sitios web profesionales</h3><p>Páginas modernas, rápidas y adaptadas a tu negocio.</p></div></article>
-      <article class="service-card"><div class="service-icon">🛒</div><div><h3>Tiendas online</h3><p>Vende tus productos en todo Chile.</p></div></article>
-      <article class="service-card"><div class="service-icon">⚙</div><div><h3>Sistemas a medida</h3><p>Soluciones personalizadas para tus procesos.</p></div></article>
-      <article class="service-card"><div class="service-icon">▥</div><div><h3>Asesoría digital</h3><p>Te ayudamos a tomar las mejores decisiones.</p></div></article>
-    </div>
-  </div>
-</section>
+<section id="servicios" class="services-section"><div class="wrap"><div class="section-head"><div><div class="section-kicker"><span></span> ¿QUÉ PODEMOS HACER POR TU NEGOCIO?</div><h2>Soluciones digitales para <em>hacer crecer tu negocio</em></h2></div><a href="#contacto">Ver todos los servicios →</a></div><div class="service-grid"><article class="service-card"><div class="service-icon">◎</div><div><h3>Sitios web profesionales</h3><p>Páginas modernas, rápidas y adaptadas a tu negocio.</p></div></article><article class="service-card"><div class="service-icon">🛒</div><div><h3>Tiendas online</h3><p>Vende tus productos en todo Chile.</p></div></article><article class="service-card"><div class="service-icon">⚙</div><div><h3>Sistemas a medida</h3><p>Soluciones personalizadas para tus procesos.</p></div></article><article class="service-card"><div class="service-icon">▥</div><div><h3>Asesoría digital</h3><p>Te ayudamos a tomar las mejores decisiones.</p></div></article></div></div></section>
 
-<section id="trabajos" class="works-section">
-  <div class="wrap">
-    <div class="section-head"><div><div class="section-kicker"><span></span> TRABAJOS REALES, NEGOCIOS REALES</div><h2>Proyectos que impulsan negocios en Linares</h2></div><a href="#trabajos">Ver más proyectos →</a></div>
-    <div class="works-grid">
-      <a class="work-card work-rocha" href="https://rocha-mueblerialinares.vercel.app" target="_blank" rel="noopener"><div class="work-overlay"></div><div class="work-content"><h3>Mueblería Rocha</h3><p>Sitio web corporativo</p><span>↗</span></div></a>
-      <a class="work-card work-linaresya" href="https://linaresya.cl" target="_blank" rel="noopener"><div class="work-overlay"></div><div class="work-content"><h3>LinaresYa</h3><p>Directorio de negocios</p><span>↗</span></div></a>
-      <a class="work-card work-maulino" href="https://restaurant-demolinares.netlify.app/" target="_blank" rel="noopener"><div class="work-overlay"></div><div class="work-content"><h3>El Rincón Maulino</h3><p>Sitio web gastronómico</p><span>↗</span></div></a>
-      <a class="work-card work-kings" href="https://barberdemolinares.netlify.app/" target="_blank" rel="noopener"><div class="work-overlay"></div><div class="work-content"><h3>Barbería King's Cut</h3><p>Sitio web corporativo</p><span>↗</span></div></a>
-    </div>
-  </div>
-</section>
+<section id="trabajos" class="works-section"><div class="wrap"><div class="section-head"><div><div class="section-kicker"><span></span> TRABAJOS REALES, NEGOCIOS REALES</div><h2>Proyectos que impulsan negocios en Linares</h2></div><a href="#trabajos">Ver más proyectos →</a></div><div class="works-grid"><a class="work-card work-rocha" href="https://rocha-mueblerialinares.vercel.app" target="_blank" rel="noopener"><div class="work-overlay"></div><div class="work-content"><h3>Mueblería Rocha</h3><p>Sitio web corporativo</p><span>↗</span></div></a><a class="work-card work-linaresya" href="https://linaresya.cl" target="_blank" rel="noopener"><div class="work-overlay"></div><div class="work-content"><h3>LinaresYa</h3><p>Directorio de negocios</p><span>↗</span></div></a><a class="work-card work-maulino" href="https://restaurant-demolinares.netlify.app/" target="_blank" rel="noopener"><div class="work-overlay"></div><div class="work-content"><h3>El Rincón Maulino</h3><p>Sitio web gastronómico</p><span>↗</span></div></a><a class="work-card work-kings" href="https://barberdemolinares.netlify.app/" target="_blank" rel="noopener"><div class="work-overlay"></div><div class="work-content"><h3>Barbería King's Cut</h3><p>Sitio web corporativo</p><span>↗</span></div></a></div></div></section>
 
 <section class="impact-section"><div class="wrap impact-inner"><div class="impact-text"><b>Negocios locales. Resultados reales.</b><span>Impulsamos la transformación digital de Linares.</span></div><div class="impact-item"><strong>5–7</strong><span>días de entrega habitual</span></div><div class="impact-item"><strong>$50k</strong><span>desde presencia básica</span></div><div class="impact-item"><strong>Linares</strong><span>nuestro foco</span></div><a class="button button-primary" href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20comenzar%20mi%20proyecto">◔ &nbsp;Comienza tu proyecto ahora</a></div></section>
 
@@ -110,6 +72,9 @@
 const hamb=document.getElementById('hamb'), mobile=document.getElementById('mobileNav');
 if(hamb){hamb.addEventListener('click',()=>{const open=mobile.classList.toggle('open');hamb.setAttribute('aria-expanded',open?'true':'false');});}
 mobile?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.classList.remove('open');hamb?.setAttribute('aria-expanded','false');}));
+const privacyNotice=document.getElementById('privacyNotice'),privacyDismiss=document.getElementById('privacyDismiss');
+if(localStorage.getItem('infoblack_privacy_notice_dismissed')==='1') privacyNotice.hidden=true;
+privacyDismiss?.addEventListener('click',()=>{localStorage.setItem('infoblack_privacy_notice_dismissed','1');privacyNotice.hidden=true;});
 </script>
 </body>
 </html>
