@@ -1,29 +1,128 @@
-/* InfoBl@ck — modern typography + portfolio imagery layer */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+/* InfoBl@ck — visual redesign 2026 */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
-:root{--font-body:'Inter',sans-serif;--font-display:'Manrope',sans-serif}
-body{font-family:var(--font-body);letter-spacing:-.01em}
-.logo{font-family:var(--font-display);font-weight:800;letter-spacing:-.035em}
-h1{font-family:var(--font-display);font-weight:800;letter-spacing:-.045em}
-.title{font-family:var(--font-display);font-weight:700;letter-spacing:-.035em}
-.final h2{font-family:var(--font-display);font-weight:800;letter-spacing:-.045em}
-.proof strong,.card h3,.price,.work h3,.step h3,.num,.plan h3,.amount,.faq-q,.about-box h3,.initial{font-family:var(--font-display)}
-.btn,.nav-cta{font-family:var(--font-body);font-weight:600}
-.kicker{font-family:var(--font-body);font-weight:600;letter-spacing:.16em}
-.eyebrow{font-family:var(--font-body);letter-spacing:.01em}
+:root{
+  --font-body:'DM Sans',sans-serif;
+  --font-display:'Manrope',sans-serif;
+  --black:#070808;
+  --panel:#0d0f0f;
+  --panel-2:#111414;
+  --acid:#eaff00;
+  --white:#f7f8f5;
+  --muted:#929996;
+  --line:#252a28;
+}
 
-/* Recuperamos el componente visual del portafolio sin alterar su contenido. */
-#trabajos .work{position:relative;overflow:hidden;padding-top:190px}
-#trabajos .work::before{content:'';position:absolute;top:0;left:0;right:0;height:170px;background-size:cover;background-position:center;opacity:.72;transition:transform .35s ease,opacity .35s ease}
-#trabajos .work::after{content:'';position:absolute;top:0;left:0;right:0;height:170px;background:linear-gradient(to bottom,rgba(8,8,8,.05),rgba(8,8,8,.78));pointer-events:none}
-#trabajos .work:hover::before{transform:scale(1.04);opacity:.9}
-#trabajos .work>*{position:relative;z-index:2}
-#trabajos .work:nth-child(1)::before{background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1000&q=82')}
-#trabajos .work:nth-child(2)::before{background-image:url('/assets/linaresya-logo.jpg');background-size:contain;background-repeat:no-repeat;background-color:#f2f2f2}
-#trabajos .work:nth-child(3)::before{background-image:url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=82')}
-#trabajos .work:nth-child(4)::before{background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1000&q=82')}
+*{box-sizing:border-box}
+body{font-family:var(--font-body)!important;background:var(--black)!important;color:var(--white);letter-spacing:-.012em}
+.logo,h1,.title,.final h2,.proof strong,.card h3,.price,.work h3,.step h3,.num,.plan h3,.amount,.faq-q,.about-box h3,.initial{font-family:var(--font-display)!important}
+.logo{font-weight:800!important;letter-spacing:-.05em!important}
 
-/* Banner de Ley 21.719 que estaba presente en la versión anterior. */
-#servicios::before{content:'';display:block;width:100%;height:150px;margin:-35px 0 55px;background:url('/assets/img/banner-pack-cumplimiento.jpg') center/cover no-repeat;border-top:1px solid #292929;border-bottom:1px solid #292929}
+/* El banner antiguo se elimina: interrumpía el ritmo visual de la portada. */
+#servicios::before{display:none!important}
 
-@media(max-width:800px){h1{letter-spacing:-.04em}.title{letter-spacing:-.03em}.final h2{letter-spacing:-.04em}#trabajos .work{padding-top:175px}#trabajos .work::before,#trabajos .work::after{height:155px}#servicios::before{height:110px;margin:-15px 0 45px}}
+/* Navegación más limpia */
+nav{height:76px!important;padding:0 34px!important;background:rgba(7,8,8,.78)!important;backdrop-filter:blur(20px)!important;border-bottom:1px solid rgba(255,255,255,.07)!important}
+nav a{font-size:13px!important;color:#a5aaa7!important;font-weight:500}
+nav a:hover{color:#fff!important}
+.nav-cta{background:var(--acid)!important;color:#070808!important;padding:10px 19px!important;font-weight:700!important;box-shadow:0 0 28px rgba(234,255,0,.12)}
+
+/* HERO: impacto desde el primer segundo */
+.hero{min-height:100vh!important;padding:145px 0 70px!important;position:relative;overflow:hidden;background:
+  radial-gradient(circle at 78% 42%,rgba(234,255,0,.11),transparent 27%),
+  radial-gradient(circle at 62% 75%,rgba(255,255,255,.035),transparent 24%),
+  var(--black)!important}
+.hero:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(7,8,8,.98) 0%,rgba(7,8,8,.84) 48%,rgba(7,8,8,.25) 100%);opacity:.72}
+.hero-inner{position:relative;z-index:2;max-width:1180px!important}
+.eyebrow{border:0!important;background:transparent!important;padding:0!important;color:var(--acid)!important;font-weight:700!important;letter-spacing:.13em!important;text-transform:uppercase;margin-bottom:22px!important}
+.dot{width:8px!important;height:8px!important;box-shadow:0 0 15px var(--acid)}
+h1{font-size:clamp(54px,7.2vw,96px)!important;line-height:.91!important;letter-spacing:-.065em!important;max-width:900px!important}
+h1 em{color:var(--acid)!important;text-shadow:0 0 35px rgba(234,255,0,.12)}
+.lead{font-size:18px!important;line-height:1.55!important;max-width:610px!important;color:#b4bbb7!important;margin:30px 0 32px!important}
+.btn{padding:14px 22px!important;border-radius:12px!important;font-size:13px!important;transition:transform .2s ease,box-shadow .2s ease!important}
+.btn:hover{transform:translateY(-2px)}
+.primary{box-shadow:0 8px 35px rgba(234,255,0,.12)}
+.secondary{border-color:#4a514e!important;background:rgba(255,255,255,.025)}
+.proof{gap:0!important;max-width:760px;margin-top:62px!important;padding-top:24px!important;border-top:1px solid rgba(255,255,255,.1)!important}
+.proof>div{padding-right:32px;margin-right:32px;border-right:1px solid #292e2c}
+.proof>div:last-child{border-right:0}
+.proof strong{font-size:19px!important;letter-spacing:-.04em}
+.proof span{font-size:11px!important;color:#747b78!important}
+
+/* Secciones con más aire y jerarquía */
+section{padding:105px 0!important}
+.kicker{font-size:10px!important;letter-spacing:.18em!important;font-weight:700!important}
+.title{font-size:clamp(34px,4.5vw,58px)!important;line-height:.98!important;letter-spacing:-.055em!important;margin-bottom:20px!important}
+.intro{font-size:15px!important;line-height:1.65!important;max-width:650px!important}
+
+/* Servicios: tarjetas tipo producto */
+.grid{gap:10px!important;background:transparent!important;border:0!important;overflow:visible!important}
+.card{background:linear-gradient(145deg,#101313,#0b0d0d)!important;border:1px solid #202523!important;border-radius:18px!important;padding:28px!important;min-height:225px!important;transition:transform .25s ease,border-color .25s ease,background .25s ease!important}
+.card:hover{background:#121616!important;border-color:#3b423f!important;transform:translateY(-4px)}
+.icon{width:44px;height:44px;border:1px solid #39403d;border-radius:13px;display:grid;place-items:center;color:var(--acid);font-size:21px!important;margin-bottom:28px!important;background:#0a0c0c}
+.card h3{font-size:18px!important;letter-spacing:-.035em!important}
+.card p{font-size:13px!important;line-height:1.55!important}
+.price{font-size:13px!important;letter-spacing:-.02em}
+
+/* Negocios */
+.businesses{background:#0a0c0c!important;border-top:1px solid #171b19;border-bottom:1px solid #171b19}
+.bizgrid{gap:10px!important}
+.biz{background:#0d1010!important;border-color:#202523!important;border-radius:15px!important;transition:transform .2s ease,border-color .2s ease}
+.biz:hover{transform:translateY(-3px);border-color:#3a423e}
+.biz b{font-family:var(--font-display)!important;font-size:15px!important}
+
+/* PORTAFOLIO: imágenes como protagonistas */
+#trabajos{background:var(--black)!important}
+#trabajos .portfolio{grid-template-columns:repeat(4,1fr)!important;gap:14px!important}
+#trabajos .work{position:relative!important;overflow:hidden!important;padding:0!important;min-height:365px!important;border:1px solid #292e2c!important;border-radius:18px!important;background:#0d1010!important;display:flex!important;justify-content:flex-end!important;transition:transform .3s ease,border-color .3s ease!important}
+#trabajos .work:hover{transform:translateY(-6px);border-color:#555d59}
+#trabajos .work:before{content:''!important;position:absolute!important;inset:0 0 92px 0!important;height:auto!important;background-size:cover!important;background-position:center!important;opacity:1!important;transition:transform .5s ease!important}
+#trabajos .work:after{content:''!important;position:absolute!important;inset:0!important;height:auto!important;background:linear-gradient(to bottom,transparent 32%,rgba(5,7,7,.12) 50%,#0a0c0c 88%,#0a0c0c 100%)!important;pointer-events:none!important}
+#trabajos .work:hover:before{transform:scale(1.055)!important;opacity:1!important}
+#trabajos .work>*{position:relative!important;z-index:2!important}
+#trabajos .work .badge{position:absolute!important;top:14px!important;left:14px!important;margin:0!important;background:rgba(234,255,0,.94)!important;backdrop-filter:blur(8px)!important;color:#080909!important;border-radius:7px!important;padding:5px 8px!important;font-size:9px!important}
+#trabajos .work h3{font-size:17px!important;margin:0 18px 4px!important;letter-spacing:-.04em!important}
+#trabajos .work p{font-size:11px!important;line-height:1.45!important;margin:0 18px!important;color:#9da5a1!important}
+#trabajos .work .tags{margin:12px 18px 0!important}
+#trabajos .work .tag{font-size:9px!important;padding:3px 7px!important}
+#trabajos .work a{font-size:11px!important;margin:13px 18px 18px!important}
+#trabajos .work .case{display:none!important}
+#trabajos .work:nth-child(1):before{background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1000&q=85')!important}
+#trabajos .work:nth-child(2):before{background-image:url('/assets/linaresya-logo.jpg')!important;background-size:cover!important;background-position:center!important;background-color:#f2f2f2!important}
+#trabajos .work:nth-child(3):before{background-image:url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=85')!important}
+#trabajos .work:nth-child(4):before{background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1000&q=85')!important}
+
+/* Precio: look de producto */
+.prices{gap:12px!important}
+.plan{background:#0c0f0f!important;border-color:#242927!important;border-radius:18px!important;transition:transform .25s ease!important}
+.plan:hover{transform:translateY(-4px)}
+.plan.hot{background:linear-gradient(145deg,#121600,#0b0e0e)!important;border-color:var(--acid)!important;box-shadow:0 0 50px rgba(234,255,0,.055)}
+.amount{font-size:34px!important;letter-spacing:-.055em!important}
+.plan li{font-size:12px!important}
+
+/* FAQ / about / cierre */
+.faq-q{font-size:15px!important;letter-spacing:-.025em!important}
+.about-box{background:#0d1010!important;border-color:#252b28!important;border-radius:18px!important}
+.initial{box-shadow:0 0 25px rgba(234,255,0,.1)}
+.final{padding:125px 0!important;background:radial-gradient(circle at 50% 0%,rgba(234,255,0,.08),transparent 45%)!important}
+.final h2{font-size:clamp(44px,7vw,78px)!important;letter-spacing:-.065em!important}
+.final .btn{box-shadow:0 10px 45px rgba(234,255,0,.14)}
+
+/* Mobile */
+@media(max-width:900px){
+  nav{padding:0 20px!important}
+  #trabajos .portfolio{grid-template-columns:repeat(2,1fr)!important}
+  .proof>div{padding-right:18px;margin-right:18px}
+}
+@media(max-width:600px){
+  .hero{padding:125px 0 60px!important}
+  h1{font-size:clamp(48px,14vw,72px)!important;letter-spacing:-.06em!important}
+  .lead{font-size:16px!important}
+  .proof{display:grid!important;grid-template-columns:1fr 1fr;gap:18px!important}
+  .proof>div{border-right:0!important;padding:0!important;margin:0!important}
+  section{padding:78px 0!important}
+  .grid{grid-template-columns:1fr!important}
+  #trabajos .portfolio{grid-template-columns:1fr!important}
+  #trabajos .work{min-height:390px!important}
+  .actions .btn{width:100%!important;justify-content:center}
+}
