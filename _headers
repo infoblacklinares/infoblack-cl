@@ -1,2 +1,6 @@
 /
-  Link: </assets/modern-typography.css>; rel="stylesheet"
+  Cache-Control: public, max-age=0, must-revalidate
+  Link: </assets/modern-typography.css?v=3>; rel="stylesheet"
+
+/assets/modern-typography.css
+  Cache-Control: public, max-age=0, must-revalidate
