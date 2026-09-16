@@ -1,0 +1,14 @@
+/* InfoBl@ck — modern typography layer */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root{--font-body:'Inter',sans-serif;--font-display:'Manrope',sans-serif}
+body{font-family:var(--font-body);letter-spacing:-.01em}
+.logo{font-family:var(--font-display);font-weight:800;letter-spacing:-.035em}
+h1{font-family:var(--font-display);font-weight:800;letter-spacing:-.045em}
+.title{font-family:var(--font-display);font-weight:700;letter-spacing:-.035em}
+.final h2{font-family:var(--font-display);font-weight:800;letter-spacing:-.045em}
+.proof strong,.card h3,.price,.work h3,.step h3,.num,.plan h3,.amount,.faq-q,.about-box h3,.initial{font-family:var(--font-display)}
+.btn,.nav-cta{font-family:var(--font-body);font-weight:600}
+.kicker{font-family:var(--font-body);font-weight:600;letter-spacing:.16em}
+.eyebrow{font-family:var(--font-body);letter-spacing:.01em}
+@media(max-width:800px){h1{letter-spacing:-.04em}.title{letter-spacing:-.03em}.final h2{letter-spacing:-.04em}}
