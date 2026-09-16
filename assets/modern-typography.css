@@ -18,20 +18,14 @@ body{font-family:var(--font-body)!important;background:var(--black)!important;co
 .logo,h1,.title,.final h2,.proof strong,.card h3,.price,.work h3,.step h3,.num,.plan h3,.amount,.faq-q,.about-box h3,.initial{font-family:var(--font-display)!important}
 .logo{font-weight:800!important;letter-spacing:-.05em!important}
 
-/* El banner antiguo se elimina: interrumpía el ritmo visual de la portada. */
 #servicios::before{display:none!important}
 
-/* Navegación más limpia */
 nav{height:76px!important;padding:0 34px!important;background:rgba(7,8,8,.78)!important;backdrop-filter:blur(20px)!important;border-bottom:1px solid rgba(255,255,255,.07)!important}
 nav a{font-size:13px!important;color:#a5aaa7!important;font-weight:500}
 nav a:hover{color:#fff!important}
 .nav-cta{background:var(--acid)!important;color:#070808!important;padding:10px 19px!important;font-weight:700!important;box-shadow:0 0 28px rgba(234,255,0,.12)}
 
-/* HERO: impacto desde el primer segundo */
-.hero{min-height:100vh!important;padding:145px 0 70px!important;position:relative;overflow:hidden;background:
-  radial-gradient(circle at 78% 42%,rgba(234,255,0,.11),transparent 27%),
-  radial-gradient(circle at 62% 75%,rgba(255,255,255,.035),transparent 24%),
-  var(--black)!important}
+.hero{min-height:100vh!important;padding:145px 0 70px!important;position:relative;overflow:hidden;background:radial-gradient(circle at 78% 42%,rgba(234,255,0,.11),transparent 27%),radial-gradient(circle at 62% 75%,rgba(255,255,255,.035),transparent 24%),var(--black)!important}
 .hero:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(7,8,8,.98) 0%,rgba(7,8,8,.84) 48%,rgba(7,8,8,.25) 100%);opacity:.72}
 .hero-inner{position:relative;z-index:2;max-width:1180px!important}
 .eyebrow{border:0!important;background:transparent!important;padding:0!important;color:var(--acid)!important;font-weight:700!important;letter-spacing:.13em!important;text-transform:uppercase;margin-bottom:22px!important}
@@ -49,13 +43,11 @@ h1 em{color:var(--acid)!important;text-shadow:0 0 35px rgba(234,255,0,.12)}
 .proof strong{font-size:19px!important;letter-spacing:-.04em}
 .proof span{font-size:11px!important;color:#747b78!important}
 
-/* Secciones con más aire y jerarquía */
 section{padding:105px 0!important}
 .kicker{font-size:10px!important;letter-spacing:.18em!important;font-weight:700!important}
 .title{font-size:clamp(34px,4.5vw,58px)!important;line-height:.98!important;letter-spacing:-.055em!important;margin-bottom:20px!important}
 .intro{font-size:15px!important;line-height:1.65!important;max-width:650px!important}
 
-/* Servicios: tarjetas tipo producto */
 .grid{gap:10px!important;background:transparent!important;border:0!important;overflow:visible!important}
 .card{background:linear-gradient(145deg,#101313,#0b0d0d)!important;border:1px solid #202523!important;border-radius:18px!important;padding:28px!important;min-height:225px!important;transition:transform .25s ease,border-color .25s ease,background .25s ease!important}
 .card:hover{background:#121616!important;border-color:#3b423f!important;transform:translateY(-4px)}
@@ -64,14 +56,12 @@ section{padding:105px 0!important}
 .card p{font-size:13px!important;line-height:1.55!important}
 .price{font-size:13px!important;letter-spacing:-.02em}
 
-/* Negocios */
 .businesses{background:#0a0c0c!important;border-top:1px solid #171b19;border-bottom:1px solid #171b19}
 .bizgrid{gap:10px!important}
 .biz{background:#0d1010!important;border-color:#202523!important;border-radius:15px!important;transition:transform .2s ease,border-color .2s ease}
 .biz:hover{transform:translateY(-3px);border-color:#3a423e}
 .biz b{font-family:var(--font-display)!important;font-size:15px!important}
 
-/* PORTAFOLIO: imágenes como protagonistas */
 #trabajos{background:var(--black)!important}
 #trabajos .portfolio{grid-template-columns:repeat(4,1fr)!important;gap:14px!important}
 #trabajos .work{position:relative!important;overflow:hidden!important;padding:0!important;min-height:365px!important;border:1px solid #292e2c!important;border-radius:18px!important;background:#0d1010!important;display:flex!important;justify-content:flex-end!important;transition:transform .3s ease,border-color .3s ease!important}
@@ -92,7 +82,6 @@ section{padding:105px 0!important}
 #trabajos .work:nth-child(3):before{background-image:url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=85')!important}
 #trabajos .work:nth-child(4):before{background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1000&q=85')!important}
 
-/* Precio: look de producto */
 .prices{gap:12px!important}
 .plan{background:#0c0f0f!important;border-color:#242927!important;border-radius:18px!important;transition:transform .25s ease!important}
 .plan:hover{transform:translateY(-4px)}
@@ -100,7 +89,6 @@ section{padding:105px 0!important}
 .amount{font-size:34px!important;letter-spacing:-.055em!important}
 .plan li{font-size:12px!important}
 
-/* FAQ / about / cierre */
 .faq-q{font-size:15px!important;letter-spacing:-.025em!important}
 .about-box{background:#0d1010!important;border-color:#252b28!important;border-radius:18px!important}
 .initial{box-shadow:0 0 25px rgba(234,255,0,.1)}
@@ -108,10 +96,21 @@ section{padding:105px 0!important}
 .final h2{font-size:clamp(44px,7vw,78px)!important;letter-spacing:-.065em!important}
 .final .btn{box-shadow:0 10px 45px rgba(234,255,0,.14)}
 
-/* Mobile */
+/* Override de cache/orden: index.html todavía contiene estilos inline antiguos. */
+body{background:var(--black)!important;color:var(--white)!important}
+nav{height:76px!important;background:rgba(7,8,8,.78)!important}
+.hero{background:radial-gradient(circle at 78% 42%,rgba(234,255,0,.11),transparent 27%),radial-gradient(circle at 62% 75%,rgba(255,255,255,.035),transparent 24%),var(--black)!important}
+h1{font-family:var(--font-display)!important;font-size:clamp(54px,7.2vw,96px)!important;line-height:.91!important;letter-spacing:-.065em!important}
+.title{font-family:var(--font-display)!important;font-size:clamp(34px,4.5vw,58px)!important;line-height:.98!important;letter-spacing:-.055em!important}
+.card,.biz,.work,.plan,.about-box{border-radius:18px!important}
+.grid{grid-template-columns:repeat(3,1fr)!important}
+#trabajos .portfolio{grid-template-columns:repeat(4,1fr)!important}
+#trabajos .work{min-height:365px!important}
+
 @media(max-width:900px){
   nav{padding:0 20px!important}
   #trabajos .portfolio{grid-template-columns:repeat(2,1fr)!important}
+  .grid{grid-template-columns:repeat(2,1fr)!important}
   .proof>div{padding-right:18px;margin-right:18px}
 }
 @media(max-width:600px){
