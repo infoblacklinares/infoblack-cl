@@ -1,4 +1,4 @@
-/* InfoBl@ck — modern typography layer */
+/* InfoBl@ck — modern typography + portfolio imagery layer */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
 :root{--font-body:'Inter',sans-serif;--font-display:'Manrope',sans-serif}
@@ -11,4 +11,19 @@ h1{font-family:var(--font-display);font-weight:800;letter-spacing:-.045em}
 .btn,.nav-cta{font-family:var(--font-body);font-weight:600}
 .kicker{font-family:var(--font-body);font-weight:600;letter-spacing:.16em}
 .eyebrow{font-family:var(--font-body);letter-spacing:.01em}
-@media(max-width:800px){h1{letter-spacing:-.04em}.title{letter-spacing:-.03em}.final h2{letter-spacing:-.04em}}
+
+/* Recuperamos el componente visual del portafolio sin alterar su contenido. */
+#trabajos .work{position:relative;overflow:hidden;padding-top:190px}
+#trabajos .work::before{content:'';position:absolute;top:0;left:0;right:0;height:170px;background-size:cover;background-position:center;opacity:.72;transition:transform .35s ease,opacity .35s ease}
+#trabajos .work::after{content:'';position:absolute;top:0;left:0;right:0;height:170px;background:linear-gradient(to bottom,rgba(8,8,8,.05),rgba(8,8,8,.78));pointer-events:none}
+#trabajos .work:hover::before{transform:scale(1.04);opacity:.9}
+#trabajos .work>*{position:relative;z-index:2}
+#trabajos .work:nth-child(1)::before{background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1000&q=82')}
+#trabajos .work:nth-child(2)::before{background-image:url('/assets/linaresya-logo.jpg');background-size:contain;background-repeat:no-repeat;background-color:#f2f2f2}
+#trabajos .work:nth-child(3)::before{background-image:url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1000&q=82')}
+#trabajos .work:nth-child(4)::before{background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1000&q=82')}
+
+/* Banner de Ley 21.719 que estaba presente en la versión anterior. */
+#servicios::before{content:'';display:block;width:100%;height:150px;margin:-35px 0 55px;background:url('/assets/img/banner-pack-cumplimiento.jpg') center/cover no-repeat;border-top:1px solid #292929;border-bottom:1px solid #292929}
+
+@media(max-width:800px){h1{letter-spacing:-.04em}.title{letter-spacing:-.03em}.final h2{letter-spacing:-.04em}#trabajos .work{padding-top:175px}#trabajos .work::before,#trabajos .work::after{height:155px}#servicios::before{height:110px;margin:-15px 0 45px}}
