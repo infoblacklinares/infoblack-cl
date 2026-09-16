@@ -3,287 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pack Cumplimiento Ley 21.719 — Protección de Datos en Chile</title>
-<meta name="description" content="Pack Cumplimiento Ley 21.719. Documentos legales listos en 48 horas: Política de Privacidad, Aviso Legal y Cláusulas de formularios. Antes del 1 de diciembre de 2026.">
-<meta name="keywords" content="Ley 21.719, protección de datos Chile, política de privacidad, cumplimiento legal, Linares">
+<title>Pack Cumplimiento Ley 21.719 | InfoBl@ck</title>
+<meta name="description" content="Implementación digital de documentos y avisos de privacidad para sitios web, preparada para la entrada en vigencia de la Ley 21.719 en Chile.">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Pack Cumplimiento Ley 21.719 — InfoBl@ck">
-<meta property="og:description" content="Deja tu web al día con documentos legales instalados en 48 horas.">
+<meta property="og:description" content="Prepara tu sitio web para las nuevas exigencias de protección de datos personales en Chile.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://infoblack.cl/pack-cumplimiento">
+<meta property="og:url" content="https://infoblack.cl/pack-cumplimiento/">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--negro:#0a0a0a;--blanco:#f5f4f0;--acento:#e8ff00;--gris:#1a1a1a;--gris2:#2a2a2a;--muted:#888;}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:var(--negro);color:var(--blanco);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 2rem;background:rgba(10,10,10,0.92);backdrop-filter:blur(12px);border-bottom:0.5px solid #222;}
-.logo{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--blanco);text-decoration:none;}
-.logo span{color:var(--acento);}
-nav ul{display:flex;gap:2rem;list-style:none;}
-nav ul a{font-size:0.85rem;color:var(--muted);text-decoration:none;transition:color 0.2s;}
-nav ul a:hover{color:var(--blanco);}
-.nav-cta{background:var(--acento)!important;color:var(--negro)!important;padding:0.5rem 1.2rem;border-radius:100px;font-weight:600!important;}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
-.hamburger span{display:block;width:24px;height:2px;background:var(--blanco);border-radius:2px;transition:all 0.3s;}
-.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.hamburger.open span:nth-child(2){opacity:0;}
-.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,10,0.97);backdrop-filter:blur(12px);border-bottom:0.5px solid #222;padding:1.5rem 2rem;z-index:99;flex-direction:column;gap:1.2rem;}
-.mobile-menu.open{display:flex;}
-.mobile-menu a{color:var(--muted);text-decoration:none;font-size:1rem;}
-.mobile-menu .nav-cta{background:var(--acento);color:var(--negro);padding:0.6rem 1.4rem;border-radius:100px;font-weight:600;text-align:center;}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 2rem 4rem;max-width:1100px;margin:0 auto;}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--gris2);border:0.5px solid #333;border-radius:100px;padding:0.4rem 1rem;font-size:0.8rem;color:var(--muted);margin-bottom:2rem;width:fit-content;animation:fadeUp 0.6s ease both;}
-.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--acento);animation:pulse 2s infinite;}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-.hero h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,7vw,5rem);font-weight:800;line-height:1.1;letter-spacing:-2px;margin-bottom:1.5rem;animation:fadeUp 0.6s 0.1s ease both;}
-.hero h1 em{font-style:normal;color:var(--acento);}
-.hero h1 .sub{display:block;color:var(--muted);font-weight:400;font-size:0.45em;letter-spacing:-0.5px;margin-top:0.5rem;}
-.hero-desc{font-size:1.05rem;color:var(--muted);max-width:600px;margin-bottom:2.5rem;font-weight:300;animation:fadeUp 0.6s 0.2s ease both;}
-.hero-desc strong{color:var(--acento);}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp 0.6s 0.3s ease both;}
-.btn-primary{background:var(--acento);color:var(--negro);padding:0.85rem 2rem;border-radius:100px;font-weight:600;font-size:0.95rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform 0.15s,opacity 0.15s;}
-.btn-primary:hover{transform:translateY(-2px);opacity:0.9;}
-.btn-secondary{background:transparent;color:var(--blanco);padding:0.85rem 2rem;border-radius:100px;border:0.5px solid #444;font-size:0.95rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:border-color 0.2s,transform 0.15s;}
-.btn-secondary:hover{border-color:#888;transform:translateY(-2px);}
-.section{max-width:1100px;margin:0 auto;padding:6rem 2rem;}
-.section-label{font-size:0.75rem;font-weight:600;letter-spacing:3px;color:var(--acento);text-transform:uppercase;margin-bottom:1rem;}
-.section-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-1px;line-height:1.1;margin-bottom:3rem;}
-.section-title .muted{color:var(--muted);font-weight:400;}
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:3rem;}
-.why-card{background:var(--gris);border:0.5px solid #2a2a2a;border-radius:16px;padding:2.5rem;transition:border-color 0.2s;}
-.why-card:hover{border-color:var(--acento);}
-.why-icon{font-size:2.5rem;margin-bottom:1rem;display:block;}
-.why-card h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:0.8rem;color:var(--blanco);}
-.why-card p{font-size:0.9rem;color:var(--muted);line-height:1.7;}
-.planes-section{background:var(--gris);padding:6rem 2rem;}
-.planes-inner{max-width:1100px;margin:0 auto;}
-.planes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:3rem;}
-.plan-card{background:var(--negro);border:0.5px solid #2a2a2a;border-radius:16px;padding:2rem;transition:border-color 0.2s;}
-.plan-card:hover{border-color:var(--acento);}
-.plan-card.destacado{border-color:var(--acento);background:#0f0f0f;}
-.plan-badge{display:inline-block;background:var(--acento);color:var(--negro);font-size:0.65rem;font-weight:700;letter-spacing:1px;padding:3px 10px;border-radius:100px;margin-bottom:1rem;}
-.plan-card h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;color:var(--blanco);}
-.plan-price{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--acento);margin-bottom:0.5rem;}
-.plan-price small{font-size:0.6rem;color:var(--muted);font-weight:400;}
-.plan-desc{font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.6;}
-.plan-items{list-style:none;margin-bottom:2rem;}
-.plan-items li{font-size:0.9rem;color:var(--muted);padding:0.6rem 0;border-bottom:0.5px solid #1a1a1a;display:flex;gap:8px;}
-.plan-items li::before{content:'✓';color:var(--acento);flex-shrink:0;font-weight:700;}
-.plan-cta{display:inline-block;width:100%;text-align:center;background:var(--acento);color:var(--negro);padding:0.8rem 1.5rem;border-radius:100px;font-weight:600;text-decoration:none;transition:opacity 0.2s,transform 0.15s;}
-.plan-cta:hover{opacity:0.9;transform:translateY(-2px);}
-.faqs-section{padding:6rem 2rem;}
-.faqs-inner{max-width:900px;margin:0 auto;}
-.faq-item{margin-bottom:2rem;padding-bottom:2rem;border-bottom:0.5px solid #222;}
-.faq-item:last-child{border-bottom:none;}
-.faq-question{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:var(--blanco);margin-bottom:0.8rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
-.faq-toggle{color:var(--acento);font-size:1.2rem;transition:transform 0.2s;}
-.faq-answer{font-size:0.9rem;color:var(--muted);line-height:1.8;max-height:300px;overflow:hidden;transition:max-height 0.3s ease;}
-.faq-item.open .faq-answer{max-height:1000px;}
-.cta-section{background:var(--acento);padding:6rem 2rem;text-align:center;}
-.cta-section h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:var(--negro);letter-spacing:-1px;line-height:1.1;margin-bottom:1.5rem;}
-.cta-section p{font-size:1rem;color:#333;margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto;}
-.btn-dark{background:var(--negro);color:var(--blanco);padding:1rem 2.5rem;border-radius:100px;font-weight:600;font-size:1rem;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:opacity 0.2s,transform 0.15s;}
-.btn-dark:hover{opacity:0.85;transform:translateY(-2px);}
-footer{border-top:0.5px solid #1a1a1a;padding:2rem;text-align:center;font-size:0.8rem;color:var(--muted);}
-footer strong{color:var(--acento);}
-footer a{color:var(--acento);text-decoration:none;transition:opacity 0.2s;}
-footer a:hover{opacity:0.8;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease;}
-.reveal.visible{opacity:1;transform:translateY(0);}
-@media(max-width:768px){
-  nav ul{display:none;}
-  .hamburger{display:flex;}
-  .hero{padding:8rem 2rem 3rem;}
-  .hero h1{font-size:2rem;letter-spacing:-0.5px;}
-  .planes-grid{grid-template-columns:1fr;}
-  .plan-card{padding:1.5rem;}
-}
+:root{--negro:#0a0a0a;--blanco:#f5f4f0;--acento:#e8ff00;--gris:#151515;--gris2:#222;--muted:#969696;--line:#2b2b2b}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--negro);color:var(--blanco);font-family:'DM Sans',sans-serif;line-height:1.65}a{color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 2rem;background:rgba(10,10,10,.92);backdrop-filter:blur(12px);border-bottom:1px solid #222}.logo{font-family:Syne,sans-serif;font-weight:800;font-size:1.3rem;text-decoration:none}.logo span{color:var(--acento)}nav ul{display:flex;gap:1.8rem;list-style:none;align-items:center}nav a{text-decoration:none}nav ul a{font-size:.85rem;color:var(--muted)}.nav-cta{background:var(--acento);color:var(--negro);padding:.55rem 1.2rem;border-radius:100px;font-weight:700}.hamb{display:none;background:none;border:0;color:var(--blanco);font-size:1.5rem}
+.hero{min-height:90vh;max-width:1100px;margin:auto;padding:9rem 2rem 5rem;display:flex;flex-direction:column;justify-content:center}.tag{display:inline-flex;width:max-content;gap:8px;align-items:center;padding:.4rem .9rem;border:1px solid #333;border-radius:100px;color:var(--muted);font-size:.78rem;margin-bottom:1.8rem}.tag b{width:6px;height:6px;border-radius:50%;background:var(--acento)}h1,h2,h3{font-family:Syne,sans-serif}h1{font-size:clamp(2.7rem,7vw,5.6rem);line-height:1.02;letter-spacing:-2px;max-width:900px}h1 em{font-style:normal;color:var(--acento)}.lead{max-width:700px;color:var(--muted);font-size:1.08rem;margin:1.8rem 0 2rem}.lead strong{color:var(--blanco)}.buttons{display:flex;gap:1rem;flex-wrap:wrap}.btn{display:inline-flex;padding:.85rem 1.7rem;border-radius:100px;text-decoration:none;font-weight:600}.primary{background:var(--acento);color:var(--negro)}.secondary{border:1px solid #444;color:var(--blanco)}
+.section{max-width:1100px;margin:auto;padding:6rem 2rem}.label{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--acento);font-weight:700;margin-bottom:1rem}.title{font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;letter-spacing:-1px;margin-bottom:2.5rem}.muted{color:var(--muted);font-weight:400}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}.card{background:var(--gris);border:1px solid var(--line);border-radius:16px;padding:2rem}.card .num{font-family:Syne,sans-serif;font-size:2rem;color:var(--acento);font-weight:800}.card h3{font-size:1.1rem;margin:.7rem 0}.card p{font-size:.9rem;color:var(--muted)}
+.plans{background:var(--gris);padding:6rem 2rem}.plans-inner{max-width:1100px;margin:auto}.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}.plan{background:var(--negro);border:1px solid var(--line);border-radius:16px;padding:2rem}.plan.featured{border-color:var(--acento)}.badge{display:inline-block;background:var(--acento);color:var(--negro);font-size:.65rem;font-weight:800;padding:3px 9px;border-radius:100px;margin-bottom:1rem}.plan h3{font-size:1.15rem}.price{font-family:Syne,sans-serif;font-size:2.4rem;font-weight:800;color:var(--acento);margin:.7rem 0}.price small{font:400 .65rem 'DM Sans',sans-serif;color:var(--muted)}.plan p{color:var(--muted);font-size:.88rem;min-height:55px}.plan ul{list-style:none;margin:1.2rem 0 1.7rem}.plan li{font-size:.88rem;color:var(--muted);padding:.55rem 0;border-bottom:1px solid #1e1e1e}.plan li::before{content:'✓';color:var(--acento);font-weight:700;margin-right:8px}.plan .btn{width:100%;justify-content:center}
+.faq{max-width:900px}.faq-item{padding:1.5rem 0;border-bottom:1px solid var(--line)}.faq-item h3{font-size:1rem;margin-bottom:.55rem}.faq-item p{font-size:.9rem;color:var(--muted)}
+.cta{background:var(--acento);color:var(--negro);text-align:center;padding:6rem 2rem}.cta h2{font-size:clamp(2rem,5vw,3.6rem);line-height:1.05;margin-bottom:1rem}.cta p{max-width:620px;margin:0 auto 2rem;color:#333}.dark{background:var(--negro);color:var(--blanco)}footer{border-top:1px solid #222;padding:2rem;text-align:center;color:var(--muted);font-size:.78rem}footer a{color:var(--acento);text-decoration:none}
+.note{margin-top:2rem;padding:1rem 1.2rem;border-left:2px solid var(--acento);background:#101010;color:var(--muted);font-size:.82rem;max-width:780px}.note strong{color:var(--blanco)}
+@media(max-width:800px){nav{padding:1rem 1.2rem}nav ul{display:none}.hamb{display:block}.hero{padding:8rem 1.3rem 4rem;min-height:auto}.section{padding:4.5rem 1.3rem}.grid,.plan-grid{grid-template-columns:1fr}h1{font-size:clamp(2.5rem,13vw,4rem)}.plans{padding:4.5rem 1.3rem}.plan p{min-height:auto}}
 </style>
 </head>
 <body>
-
 <nav>
-  <a href="/" class="logo">Info<span>Bl@ck</span></a>
-  <ul>
-    <li><a href="/#servicios">Servicios</a></li>
-    <li><a href="/#demos">Demos</a></li>
-    <li><a href="/#precios">Precios</a></li>
-    <li><a href="/#nosotros">Nosotros</a></li>
-    <li><a href="/#contacto" class="nav-cta">Hablemos →</a></li>
-  </ul>
-  <button class="hamburger" id="hambBtn" aria-label="Menú">
-    <span></span><span></span><span></span>
-  </button>
+<a class="logo" href="/">Info<span>Bl@ck</span></a>
+<ul><li><a href="/#servicios">Servicios</a></li><li><a href="/#demos">Demos</a></li><li><a href="/#precios">Precios</a></li><li><a href="/#contacto" class="nav-cta">Hablemos →</a></li></ul>
+<button class="hamb" aria-label="Abrir menú" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</button>
 </nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="/#servicios" onclick="closeMenu()">Servicios</a>
-  <a href="/#demos" onclick="closeMenu()">Demos</a>
-  <a href="/#precios" onclick="closeMenu()">Precios</a>
-  <a href="/#nosotros" onclick="closeMenu()">Nosotros</a>
-  <a href="/#contacto" class="nav-cta" onclick="closeMenu()">Hablemos →</a>
-</div>
-
 <section class="hero">
-  <div class="hero-tag">Cumplimiento Legal · Ley 21.719</div>
-  <h1>
-    Pack Cumplimiento<br>
-    <em>Ley 21.719</em>
-    <span class="sub">Deja tu negocio al día antes de diciembre</span>
-  </h1>
-  <p class="hero-desc">La nueva ley de protección de datos personales entra en vigor el <strong>1 de diciembre de 2026</strong>. InfoBl@ck te entrega los documentos legales que tu sitio necesita, instalados y listos, en <strong>48 horas</strong>.</p>
-  <div class="hero-btns">
-    <a href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20me%20interesa%20el%20Pack%20Cumplimiento%20Ley%2021.719.%20%C2%BFPodemos%20hablar%3F" class="btn-primary">📋 Cotiza tu Pack</a>
-    <a href="#planes" class="btn-secondary">Ver planes →</a>
-  </div>
+<div class="tag"><b></b> Protección de datos · Chile</div>
+<h1>Prepara tu web para la <em>Ley 21.719.</em></h1>
+<p class="lead">La Ley N° 21.719 entra en vigencia el <strong>1 de diciembre de 2026</strong>. Revisamos el tratamiento de datos de tu sitio y realizamos la implementación digital de los documentos y avisos que correspondan al alcance contratado.</p>
+<div class="buttons"><a class="btn primary" href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20me%20interesa%20el%20Pack%20Cumplimiento%20Ley%2021.719.%20%C2%BFPodemos%20hablar%3F">Cotiza tu Pack →</a><a class="btn secondary" href="#planes">Ver planes</a></div>
+<div class="note"><strong>Importante:</strong> el servicio es de implementación digital y documentación según los antecedentes y herramientas efectivamente utilizadas. No constituye asesoría jurídica ni certificación de cumplimiento.</div>
 </section>
-
-<section class="section" id="por-que">
-  <div class="section-label reveal">¿Por qué ahora?</div>
-  <h2 class="section-title reveal">Razones para actuar <span class="muted">antes de<br>diciembre 2026</span></h2>
-  <div class="why-grid">
-    <div class="why-card reveal">
-      <span class="why-icon">🏆</span>
-      <h3>Primer en Linares</h3>
-      <p>Ninguna agencia en Linares ofrece este servicio todavía. Sé el primero en cumplir y diferénciate del mercado local.</p>
-    </div>
-    <div class="why-card reveal">
-      <span class="why-icon">⚠️</span>
-      <h3>Multas desde diciembre</h3>
-      <p>Las sanciones por incumplimiento comienzan el 1 de diciembre de 2026. Desde $50.000 hasta $10.000.000 según gravedad.</p>
-    </div>
-    <div class="why-card reveal">
-      <span class="why-icon">📊</span>
-      <h3>Recolectas datos sin saberlo</h3>
-      <p>Tu web ya recolecta información: formularios de contacto, WhatsApp, cookies de Google Analytics. Necesitas documentar cómo la usas.</p>
-    </div>
-  </div>
+<section class="section" id="servicios">
+<div class="label">¿Qué hacemos?</div><h2 class="title">Del diagnóstico a la <span class="muted">implementación.</span></h2>
+<div class="grid">
+<div class="card"><div class="num">01</div><h3>Revisamos tu sitio</h3><p>Identificamos formularios, canales de contacto, herramientas externas, analítica y otros tratamientos de datos que estén presentes en el sitio informado.</p></div>
+<div class="card"><div class="num">02</div><h3>Preparamos los documentos</h3><p>Adaptamos la documentación al funcionamiento y alcance del proyecto, evitando copiar una política genérica que no refleje tu sitio.</p></div>
+<div class="card"><div class="num">03</div><h3>Implementamos</h3><p>Publicamos la política y los avisos acordados, dejamos los enlaces accesibles y documentamos las herramientas consideradas.</p></div>
+</div>
 </section>
-
-<section class="planes-section" id="planes">
-  <div class="planes-inner">
-    <div class="section-label reveal">Planes</div>
-    <h2 class="section-title reveal">Elige el que se ajusta <span class="muted">a tu negocio</span></h2>
-    <div class="planes-grid">
-      <div class="plan-card reveal">
-        <h3>Plan Básico</h3>
-        <div class="plan-price">$30.000 <small>única vez</small></div>
-        <p class="plan-desc">Ideal para negocios que recién empiezan o tienen poca recolección de datos.</p>
-        <ul class="plan-items">
-          <li>Política de Privacidad personalizada</li>
-          <li>Instalación en tu sitio</li>
-          <li>Revisión de cumplimiento básica</li>
-          <li>Entrega en 48 horas</li>
-        </ul>
-        <a href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20el%20Plan%20B%C3%A1sico%20del%20Pack%20Cumplimiento." class="plan-cta">Contratar →</a>
-      </div>
-      <div class="plan-card destacado reveal">
-        <div class="plan-badge">MÁS POPULAR</div>
-        <h3>Plan Estándar</h3>
-        <div class="plan-price">$40.000 <small>única vez</small></div>
-        <p class="plan-desc">Cumplimiento completo para la mayoría de sitios pequeños y medianos.</p>
-        <ul class="plan-items">
-          <li>Política de Privacidad personalizada</li>
-          <li>Aviso Legal específico</li>
-          <li>Instalación en tu sitio</li>
-          <li>Revisión completa de formularios</li>
-          <li>Entrega en 48 horas</li>
-        </ul>
-        <a href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20el%20Plan%20Est%C3%A1ndar%20del%20Pack%20Cumplimiento." class="plan-cta">Contratar →</a>
-      </div>
-      <div class="plan-card reveal">
-        <h3>Plan Completo</h3>
-        <div class="plan-price">$50.000 <small>única vez</small></div>
-        <p class="plan-desc">Cobertura máxima: toda la ley de protección de datos.</p>
-        <ul class="plan-items">
-          <li>Política de Privacidad personalizada</li>
-          <li>Aviso Legal específico</li>
-          <li>Cláusula de consentimiento para formularios</li>
-          <li>Auditoría completa de recolección de datos</li>
-          <li>Instalación y configuración</li>
-          <li>Asesoría post-entrega (1 mes)</li>
-          <li>Entrega en 48 horas</li>
-        </ul>
-        <a href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20el%20Plan%20Completo%20del%20Pack%20Cumplimiento." class="plan-cta">Contratar →</a>
-      </div>
-    </div>
-  </div>
+<section class="section" id="diferencias">
+<div class="label">¿Por qué hacerlo ahora?</div><h2 class="title">La privacidad también es <span class="muted">parte de tu web.</span></h2>
+<div class="grid">
+<div class="card"><div class="num">01</div><h3>Transparencia</h3><p>Una política accesible permite informar a las personas qué datos se tratan, para qué y bajo qué condiciones, de acuerdo con el tratamiento efectivamente realizado.</p></div>
+<div class="card"><div class="num">02</div><h3>Preparación</h3><p>La entrada en vigencia está fijada para el 1 de diciembre de 2026. Preparar con anticipación permite revisar procesos y documentación sin hacerlo a última hora.</p></div>
+<div class="card"><div class="num">03</div><h3>Implementación real</h3><p>No asumimos que todos los sitios usan las mismas herramientas. El alcance se define según el sitio, sus formularios, servicios externos y flujo de información.</p></div>
+</div>
 </section>
-
-<section class="section" id="faqs">
-  <div class="section-label reveal">Dudas frecuentes</div>
-  <h2 class="section-title reveal">Preguntas comunes <span class="muted">sobre Ley 21.719</span></h2>
-  <div class="faqs-inner">
-    <div class="faq-item reveal">
-      <div class="faq-question" onclick="toggleFAQ(this)">
-        ¿Por qué necesito una Política de Privacidad?
-        <span class="faq-toggle">+</span>
-      </div>
-      <div class="faq-answer">La Ley 21.719 obliga a todo sitio web que recolecte datos personales (nombre, correo, teléfono, dirección) a informar cómo los usa. Sin esta política, incumples la ley y puedes ser multado.</div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-question" onclick="toggleFAQ(this)">
-        ¿Qué diferencia hay entre Política de Privacidad y Aviso Legal?
-        <span class="faq-toggle">+</span>
-      </div>
-      <div class="faq-answer">La Política de Privacidad habla de datos personales (cómo los recolectas y usas). El Aviso Legal cubre condiciones generales, limitaciones de responsabilidad y términos de uso del sitio. Ambos son complementarios.</div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-question" onclick="toggleFAQ(this)">
-        ¿Necesito los documentos aunque no venda nada online?
-        <span class="faq-toggle">+</span>
-      </div>
-      <div class="faq-answer">Sí. Incluso si solo tienes un formulario de contacto o un botón de WhatsApp, ya estás recolectando datos personales. La ley aplica a cualquier sitio que capture información de visitantes.</div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-question" onclick="toggleFAQ(this)">
-        ¿Cuánto me puede costar si no cumplo?
-        <span class="faq-toggle">+</span>
-      </div>
-      <div class="faq-answer">Las multas van desde $50.000 (infracciones leves) hasta $10.000.000 (infracciones graves). Dependiendo de cuántos datos recolectes y cuánto tiempo estés incumpliendo, el costo puede ser muy alto.</div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-question" onclick="toggleFAQ(this)">
-        ¿Incluye cookies de Google Analytics?
-        <span class="faq-toggle">+</span>
-      </div>
-      <div class="faq-answer">Sí. Google Analytics recolecta datos de usuarios (comportamiento, ubicación, dispositivo). Nuestro Plan Completo audita tu sitio y documenta toda recolección de datos, incluyendo scripts y cookies.</div>
-    </div>
-    <div class="faq-item reveal">
-      <div class="faq-question" onclick="toggleFAQ(this)">
-        ¿Puedo usar un template descargado de internet?
-        <span class="faq-toggle">+</span>
-      </div>
-      <div class="faq-answer">No recomendamos. Los templates genéricos no consideran tu negocio específico, tu forma de recolectar datos ni la legislación chilena actual. Nuestros documentos son 100% personalizados a tu sitio.</div>
-    </div>
-  </div>
+<section class="plans" id="planes">
+<div class="plans-inner"><div class="label">Planes</div><h2 class="title">Elige el alcance que <span class="muted">necesita tu sitio.</span></h2>
+<div class="plan-grid">
+<div class="plan"><h3>Esencial</h3><div class="price">$30.000 <small>CLP</small></div><p>Para sitios simples con necesidades básicas de documentación.</p><ul><li>Política de Privacidad adaptada</li><li>Publicación en el sitio</li><li>Enlaces y estructura básica</li><li>Revisión de antecedentes entregados</li></ul><a class="btn primary" href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20cotizar%20el%20Pack%20Esencial%20Ley%2021.719.">Consultar</a></div>
+<div class="plan featured"><span class="badge">RECOMENDADO PARA SITIOS CON CONTACTO</span><h3>Negocio</h3><div class="price">$40.000 <small>CLP</small></div><p>Para negocios con formularios y distintos canales de contacto.</p><ul><li>Política de Privacidad adaptada</li><li>Avisos y textos para formularios</li><li>Implementación de enlaces</li><li>Revisión de herramientas declaradas</li><li>Soporte post-entrega</li></ul><a class="btn primary" href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20cotizar%20el%20Pack%20Negocio%20Ley%2021.719.">Consultar</a></div>
+<div class="plan"><h3>Integral</h3><div class="price">$50.000 <small>CLP</small></div><p>Para sitios con mayor variedad de tratamientos y herramientas.</p><ul><li>Todo lo del Pack Negocio</li><li>Revisión ampliada del sitio</li><li>Documentación complementaria según alcance</li><li>Revisión de servicios externos informados</li><li>Soporte post-entrega</li></ul><a class="btn primary" href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20cotizar%20el%20Pack%20Integral%20Ley%2021.719.">Consultar</a></div>
+</div>
+<p class="note"><strong>Plazo:</strong> objetivo de implementación de hasta 48 horas una vez recibidos los antecedentes necesarios y definido el alcance. Proyectos con cambios o funcionalidades especiales pueden requerir más tiempo.</p>
+</div>
 </section>
-
-<section class="cta-section">
-  <h2>Cumple la ley antes<br>de que sea tarde</h2>
-  <p>48 horas de trabajo. Documentos listos. Tu web protegida. Multas evitadas.</p>
-  <a href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20el%20Pack%20Cumplimiento%20Ley%2021.719.%20%C2%BFCu%C3%A1l%20es%20el%20proceso%3F" class="btn-dark">💬 Cotiza ahora →</a>
+<section class="section faq" id="preguntas">
+<div class="label">Preguntas frecuentes</div><h2 class="title">Lo importante, <span class="muted">sin letra chica.</span></h2>
+<div class="faq-item"><h3>¿La Ley 21.719 entra en vigencia en diciembre de 2026?</h3><p>Sí. La fecha de entrada en vigencia está fijada para el 1 de diciembre de 2026. La aplicación concreta de las obligaciones depende del tratamiento de datos y del rol que corresponda en cada caso.</p></div>
+<div class="faq-item"><h3>¿Todos los sitios necesitan exactamente los mismos documentos?</h3><p>No. El tratamiento de datos, las herramientas utilizadas y la relación con proveedores pueden ser distintos. Por eso el alcance se define a partir del sitio y de los antecedentes entregados.</p></div>
+<div class="faq-item"><h3>¿Incluye Google Analytics?</h3><p>Si el sitio utiliza Google Analytics u otra herramienta de analítica, revisamos su presencia y tratamiento dentro del alcance acordado. No asumimos que una herramienta está instalada si no existe en el sitio.</p></div>
+<div class="faq-item"><h3>¿Esto es asesoría legal?</h3><p>No. InfoBl@ck realiza implementación digital y adaptación de documentación según el alcance contratado. Si necesitas interpretación jurídica, una evaluación de riesgos específica o asesoría legal, corresponde consultar a un profesional habilitado.</p></div>
+<div class="faq-item"><h3>¿Puedo contratarlo aunque mi web todavía no esté terminada?</h3><p>Sí, pero la documentación debe ajustarse a las herramientas y flujos que finalmente se implementen. Si esos elementos cambian, puede ser necesario actualizar el alcance.</p></div>
 </section>
-
-<footer>
-  <p>© 2026 <strong>InfoBl@ck</strong> — Agencia Digital · Linares, VII Región</p>
-  <p style="margin-top:0.5rem;"><a href="/">← Volver a inicio</a></p>
-  <p style="margin-top:0.5rem;"><a href="/politica-de-privacidad">Política de Privacidad</a></p>
-</footer>
-
-<script>
-const hambBtn=document.getElementById('hambBtn');
-const mobileMenu=document.getElementById('mobileMenu');
-hambBtn.addEventListener('click',()=>{hambBtn.classList.toggle('open');mobileMenu.classList.toggle('open');});
-function closeMenu(){hambBtn.classList.remove('open');mobileMenu.classList.remove('open');}
-function toggleFAQ(el){el.parentElement.classList.toggle('open');el.querySelector('.faq-toggle').textContent=el.parentElement.classList.contains('open')?'−':'+';}
-const observer=new IntersectionObserver((entries)=>{entries.forEach((entry,i)=>{if(entry.isIntersecting){setTimeout(()=>entry.target.classList.add('visible'),i*80);}});},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-</script>
+<section class="cta" id="contacto"><h2>¿Quieres saber qué necesita tu web?</h2><p>Cuéntanos qué sitio tienes, qué herramientas utilizas y qué necesitas implementar. Revisamos el alcance antes de cotizar.</p><a class="btn dark" href="https://wa.me/56984272557?text=Hola%20InfoBl%40ck%2C%20quiero%20revisar%20mi%20sitio%20para%20la%20Ley%2021.719.">Hablar por WhatsApp →</a></section>
+<footer>© 2026 InfoBl@ck · Linares, Región del Maule, Chile · <a href="/politica-de-privacidad/">Política de Privacidad</a></footer>
 </body>
 </html>
