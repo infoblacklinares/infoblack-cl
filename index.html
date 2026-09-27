@@ -79,8 +79,15 @@ const hamb=document.getElementById('hamb'), mobile=document.getElementById('mobi
 if(hamb){hamb.addEventListener('click',()=>{const open=mobile.classList.toggle('open');hamb.setAttribute('aria-expanded',open?'true':'false');});}
 mobile?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.classList.remove('open');hamb?.setAttribute('aria-expanded','false');}));
 const privacyNotice=document.getElementById('privacyNotice'),privacyDismiss=document.getElementById('privacyDismiss');
-if(localStorage.getItem('infoblack_privacy_notice_dismissed')==='1') privacyNotice.hidden=true;
-privacyDismiss?.addEventListener('click',()=>{localStorage.setItem('infoblack_privacy_notice_dismissed','1');privacyNotice.hidden=true;});
+if(privacyNotice&&privacyDismiss){
+  let dismissed=false;
+  try{dismissed=localStorage.getItem('infoblack_privacy_notice_dismissed')==='1';}catch(e){}
+  if(dismissed) privacyNotice.hidden=true;
+  privacyDismiss.addEventListener('click',()=>{
+    privacyNotice.hidden=true;
+    try{localStorage.setItem('infoblack_privacy_notice_dismissed','1');}catch(e){try{sessionStorage.setItem('infoblack_privacy_notice_dismissed','1');}catch(e){}}
+  });
+}
 </script>
 </body>
 </html>
